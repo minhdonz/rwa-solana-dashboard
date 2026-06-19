@@ -11,8 +11,8 @@ export default function VerdictMark({ verdict }: { verdict: Verdict }) {
     <span
       aria-label={meta.label}
       title={meta.label}
-      className="self-stretch shrink-0 rounded-full"
-      style={{ width: 3, minHeight: "1em", backgroundColor: meta.color }}
+      className="self-stretch shrink-0 rounded-sm"
+      style={{ width: 5, minHeight: "1em", backgroundColor: meta.color }}
     />
   );
 }
