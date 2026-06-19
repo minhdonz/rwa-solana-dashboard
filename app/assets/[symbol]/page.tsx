@@ -15,7 +15,7 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: { symbol: string } }): Metadata {
   const asset = getAsset(params.symbol);
-  return { title: asset ? `${asset.name} — DeFi utilization by issuer` : "Asset not found" };
+  return { title: asset ? `${asset.name}: DeFi utilization by issuer` : "Asset not found" };
 }
 
 export default function AssetDetailPage({ params }: { params: { symbol: string } }) {
@@ -41,7 +41,7 @@ export default function AssetDetailPage({ params }: { params: { symbol: string }
 
       <p className="text-sm text-slate-600">
         <span className="text-navy font-medium">{asset.variants.length} issuer variant(s).</span> The same
-        underlying, wrapped differently — compare holders and how much of each is actually deployed in
+        underlying, wrapped differently. Compare holders and how much of each is actually deployed in
         DeFi (tradeable liquidity and lending/borrow demand).
       </p>
 
@@ -79,7 +79,7 @@ function VariantPanel({ variant }: { variant: AssetVariant }) {
         </div>
         {!variant.mint && (
           <span className="text-xs border border-caution/40 bg-caution/5 text-caution px-2 py-1">
-            mint TODO — set in data/assets.ts to refresh
+            mint TODO: set in data/assets.ts to refresh
           </span>
         )}
       </div>

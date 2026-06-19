@@ -15,22 +15,22 @@ export default function HomePage() {
   return (
     <div className="space-y-10">
       <section className="max-w-3xl border-b border-line pb-8">
-        <p className="eyebrow mb-3">Tokenized equities on Solana — reference</p>
+        <p className="eyebrow mb-3">Tokenized equities on Solana</p>
         <h1 className="font-serif text-4xl font-semibold text-navy leading-[1.15]">
-          Who treats holders best, and where the tokens actually live.
+          Who treats holders best, and what gets used in DeFi.
         </h1>
         <p className="text-slate-600 leading-relaxed mt-4">
-          A &quot;tokenized stock&quot; means materially different things depending on the issuer. Some
-          confer a real, redeemable claim to a share; most confer price exposure with no voting rights and
-          institution-only redemption. This reference does two things: it compares the{" "}
+          A &quot;tokenized stock&quot; means different things depending on the issuer. Some give a real,
+          redeemable claim to a share; most give price exposure with no voting rights and institution-only
+          redemption. This reference compares the{" "}
           <Link href="/issuers" className="text-brand hover:underline">
             rights each issuer grants
           </Link>
-          , then deep-dives the{" "}
+          , then ranks the{" "}
           <Link href="/assets" className="text-brand hover:underline">
             leading tokens
           </Link>{" "}
-          to show where holders keep them — self-custody, DEX liquidity, lending collateral, or exchanges.
+          by how much is actually deployed in DeFi: tradeable liquidity and lending demand.
         </p>
       </section>
 
@@ -63,7 +63,7 @@ export default function HomePage() {
           </h2>
           <p className="text-sm text-slate-600 mt-2 leading-relaxed">
             Voting, dividends, redemption, custody, DeFi composability and eligibility compared across{" "}
-            {ISSUERS.length} issuers — xStocks, Backpack, Ondo, Pre-Stocks, Kraken and Robinhood.
+            {ISSUERS.length} issuers: xStocks, Backpack, Ondo, Pre-Stocks, Kraken, Robinhood.
             Every claim sourced.
           </p>
           <span className="text-brand text-sm mt-3 inline-block">View the rights matrix →</span>
@@ -74,8 +74,8 @@ export default function HomePage() {
             Leading tokens &amp; their DeFi utilization
           </h2>
           <p className="text-sm text-slate-600 mt-2 leading-relaxed">
-            For the top tokenized stocks, see how much is actually deployed in DeFi — tradeable DEX
-            liquidity plus collateral supplied and borrowed in lending markets (Kamino) — with issuer
+            For the top tokenized stocks, see how much is actually deployed in DeFi: tradeable DEX
+            liquidity plus collateral supplied and borrowed in lending markets (Kamino), with issuer
             variants side by side.
           </p>
           <span className="text-brand text-sm mt-3 inline-block">Explore the tokens →</span>

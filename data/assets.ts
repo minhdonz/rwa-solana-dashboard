@@ -2,14 +2,14 @@
  * CURATED top tokenized stocks on Solana + their per-issuer variants.
  *
  * The same underlying (e.g. SpaceX) often exists as several distinct tokens from
- * different issuers with different rights — we track each `variant` so the deep-dive
+ * different issuers with different rights. We track each `variant` so the deep-dive
  * can compare them side by side.
  *
  * `mint`: Solana SPL mint address. Required by `npm run refresh` to fetch holders.
  *   Mints below were resolved via the Jupiter token search API (scripts/resolve-mints.ts)
  *   and corroborated by issuer naming patterns (xStocks mints start "Xs" / name "… xStock";
  *   Ondo mints end "ondo" / name "… (Ondo Tokenized)") plus realistic holder counts & mcap.
- *   `null` = no verified token found — the refresh script skips null mints and the UI falls
+ *   `null` = no verified token found. The refresh script skips null mints and the UI falls
  *   back to the seed snapshot for that symbol.
  */
 
@@ -79,7 +79,7 @@ export const ASSETS: Asset[] = [
     symbol: "mstr",
     name: "Strategy (MicroStrategy)",
     sector: "Bitcoin treasury",
-    note: "Popular crypto-adjacent equity — natural fit for crypto-native holders using DeFi leverage.",
+    note: "Popular crypto-adjacent equity, a natural fit for crypto-native holders using DeFi leverage.",
     variants: [
       { issuerSlug: "xstocks-backed", tokenSymbol: "MSTRx", mint: "XsP7xzNPvEHS1m6qfanPUGjNmdnmsLKEoNAnHjdxxyZ" },
       { issuerSlug: "ondo-global-markets", tokenSymbol: "MSTRon", mint: "FSz4ouiqXpHuGPcpacZfTzbMjScoj5FfzHkiyu2ondo" },
@@ -130,7 +130,7 @@ export const ASSETS: Asset[] = [
     name: "S&P 500 ETF (SPY)",
     sector: "Broad-market ETF",
     isETF: true,
-    note: "Tokenized index exposure — a building block for on-chain diversified strategies.",
+    note: "Tokenized index exposure, a building block for on-chain diversified strategies.",
     variants: [
       { issuerSlug: "xstocks-backed", tokenSymbol: "SPYx", mint: "XsoCS1TfEyfFhfvj8EtZ528L3CaKBDBRqRapnBbDF2W" },
       { issuerSlug: "ondo-global-markets", tokenSymbol: "SPYon", mint: "k18WJUULWheRkSpSquYGdNNmtuE2Vbw1hpuUi92ondo" },

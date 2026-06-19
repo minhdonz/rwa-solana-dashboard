@@ -14,7 +14,7 @@ export default function DefiCoverage({ snap }: { snap: AssetSnapshot }) {
   if (!hasLending && !hasLiquidity) {
     return (
       <p className="text-sm text-neutral">
-        Not listed in any tracked DeFi venue — no measurable DEX liquidity or lending market.
+        Not listed in any tracked DeFi venue. No measurable DEX liquidity or lending market.
       </p>
     );
   }
@@ -68,7 +68,7 @@ export default function DefiCoverage({ snap }: { snap: AssetSnapshot }) {
           </div>
         ) : (
           <p className="text-sm text-neutral">
-            Tradeable on DEXs, but not listed as collateral in any tracked lending market — so no
+            Tradeable on DEXs, but not listed as collateral in any tracked lending market, so there is no
             borrow/lend demand to measure.
           </p>
         )}

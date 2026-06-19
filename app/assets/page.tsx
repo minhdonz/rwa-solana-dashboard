@@ -7,7 +7,7 @@ import { getAssetSnapshot } from "@/lib/snapshot";
 import { formatNumber, formatUsd } from "@/lib/format";
 
 export const metadata: Metadata = {
-  title: "Tokenized Stocks on Solana — DeFi Utilization",
+  title: "Tokenized Stocks on Solana: DeFi Utilization",
 };
 
 interface Row {
@@ -49,7 +49,7 @@ export default function AssetsPage() {
         </h1>
         <p className="text-slate-600 leading-relaxed mt-3">
           Holding a tokenized stock is one thing; <em>using</em> it is another. This ranks the leading
-          names by their DeFi footprint — tradeable DEX liquidity plus how much is supplied as collateral
+          names by their DeFi footprint: tradeable DEX liquidity plus how much is supplied as collateral
           and borrowed against in lending markets (Kamino). Open one to compare issuer variants.
         </p>
       </header>

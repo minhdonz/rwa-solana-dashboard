@@ -18,7 +18,7 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tokenized Stocks on Solana — Issuer Rights & Usage",
+  title: "Tokenized Stocks on Solana: Issuer Rights & DeFi Usage",
   description:
     "An institutional reference comparing how tokenized-stock issuers on Solana treat holder rights, and where the leading tokens are held and used.",
 };

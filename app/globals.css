@@ -21,7 +21,7 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
-/* Small uppercase eyebrow/column labels — an institutional-report convention. */
+/* Small uppercase eyebrow/column labels (institutional-report convention). */
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.06em;

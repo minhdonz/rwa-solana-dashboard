@@ -10,7 +10,7 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const issuer = getIssuer(params.slug);
-  return { title: issuer ? `${issuer.name} — Holder Rights` : "Issuer not found" };
+  return { title: issuer ? `${issuer.name}: Holder Rights` : "Issuer not found" };
 }
 
 export default function IssuerDetailPage({ params }: { params: { slug: string } }) {
