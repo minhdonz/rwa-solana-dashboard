@@ -1,6 +1,12 @@
 import { type AssetSnapshot } from "@/lib/snapshot";
 import { formatUsd, formatPct } from "@/lib/format";
 
+function impactClass(pct: number): string {
+  if (pct < 0.5) return "text-pos";
+  if (pct < 2) return "text-caution";
+  return "text-neg";
+}
+
 /**
  * DeFi utilization for a single token variant: tradeable DEX liquidity plus the
  * lending markets it's listed in (supply / borrow demand / utilization / rates / LTV).
@@ -73,6 +79,44 @@ export default function DefiCoverage({ snap }: { snap: AssetSnapshot }) {
           </p>
         )}
       </div>
+
+      {snap.slippage && snap.slippage.length > 0 && (
+        <div>
+          <h4 className="eyebrow mb-2">Buy slippage (price impact)</h4>
+          <div className="overflow-x-auto border border-line">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-surface border-b border-line-strong eyebrow">
+                  <th className="text-left px-3 py-2 font-semibold">Buy size</th>
+                  {snap.slippage.map((p) => (
+                    <th key={p.sizeUsd} className="text-right px-3 py-2 font-semibold">
+                      {formatUsd(p.sizeUsd, { compact: true })}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="px-3 py-2 text-neutral">Price impact</td>
+                  {snap.slippage.map((p) => (
+                    <td key={p.sizeUsd} className="px-3 py-2 text-right tnum">
+                      {p.routable && p.priceImpactPct != null ? (
+                        <span className={impactClass(p.priceImpactPct)}>{formatPct(p.priceImpactPct, 2)}</span>
+                      ) : (
+                        <span className="text-neutral">no route</span>
+                      )}
+                    </td>
+                  ))}
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-neutral mt-1.5">
+            Price impact to market-buy with USDC, routed via Jupiter. &quot;No route&quot; means the size
+            can&apos;t be filled on-chain at current liquidity.
+          </p>
+        </div>
+      )}
     </div>
   );
 }

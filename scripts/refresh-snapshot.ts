@@ -14,6 +14,7 @@ import { join } from "node:path";
 import { ASSETS } from "../data/assets";
 import { getKaminoReservesByMint, type KaminoReserve } from "../lib/kamino";
 import { getTokenMarket } from "../lib/jupiterData";
+import { getSlippageCurve } from "../lib/slippage";
 import type { AssetSnapshot, LendingReserve } from "../lib/snapshot";
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -56,6 +57,7 @@ async function main() {
         const lendingSupplyUsd = lending.reduce((s, r) => s + r.supplyUsd, 0);
         const lendingBorrowUsd = lending.reduce((s, r) => s + r.borrowUsd, 0);
         const defiTvlUsd = (market.dexLiquidityUsd ?? 0) + lendingSupplyUsd;
+        const slippage = await getSlippageCurve(variant.mint);
 
         assets[variant.tokenSymbol] = {
           symbol: variant.tokenSymbol,
@@ -69,13 +71,16 @@ async function main() {
           lendingSupplyUsd,
           lendingBorrowUsd,
           defiTvlUsd,
+          slippage,
         };
         processed += 1;
+        const buy10k = slippage.find((s) => s.sizeUsd === 10_000);
+        const impact10k = buy10k?.routable ? `${buy10k.priceImpactPct}%` : "no route";
         console.log(
           `• ${variant.tokenSymbol.padEnd(7)} holders=${market.holders ?? "?"}` +
             `  dexLiq=$${Math.round(market.dexLiquidityUsd ?? 0).toLocaleString()}` +
             `  kaminoSupply=$${Math.round(lendingSupplyUsd).toLocaleString()}` +
-            `  kaminoBorrow=$${Math.round(lendingBorrowUsd).toLocaleString()}` +
+            `  $10k buy impact=${impact10k}` +
             (lending.length ? "  ✓ lending" : "")
         );
         await sleep(120); // be gentle on the Jupiter lite API

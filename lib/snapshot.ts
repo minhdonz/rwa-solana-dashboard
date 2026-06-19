@@ -10,6 +10,13 @@
  */
 import snapshotJson from "@/data/snapshot.json";
 
+/** Price impact for buying a given USD size (from Jupiter Quote). */
+export interface SlippagePoint {
+  sizeUsd: number;
+  priceImpactPct: number | null; // percent; null when not routable
+  routable: boolean;
+}
+
 /** One Kamino lending reserve for a token (a token can be in several markets). */
 export interface LendingReserve {
   protocol: "Kamino";
@@ -36,8 +43,10 @@ export interface AssetSnapshot {
   /** Convenience aggregates over `lending`. */
   lendingSupplyUsd: number;
   lendingBorrowUsd: number;
-  /** DEX liquidity + lending supply (USD) — the token's total DeFi footprint. */
+  /** DEX liquidity + lending supply (USD), the token's total DeFi footprint. */
   defiTvlUsd: number;
+  /** Price impact to buy on-chain at several USD sizes (empty if not measured). */
+  slippage: SlippagePoint[];
 }
 
 export interface Snapshot {

@@ -8,7 +8,8 @@
 import { writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { ASSETS } from "../data/assets";
-import type { AssetSnapshot, LendingReserve } from "../lib/snapshot";
+import { SLIPPAGE_SIZES_USD } from "../lib/slippage";
+import type { AssetSnapshot, LendingReserve, SlippagePoint } from "../lib/snapshot";
 
 function mulberry32(seed: number) {
   return function () {
@@ -62,6 +63,16 @@ for (const asset of ASSETS) {
     const lendingSupplyUsd = lending.reduce((s, r) => s + r.supplyUsd, 0);
     const lendingBorrowUsd = lending.reduce((s, r) => s + r.borrowUsd, 0);
 
+    // Synthetic slippage: impact scales with size/liquidity; large sizes break on thin tokens.
+    const slippage: SlippagePoint[] = SLIPPAGE_SIZES_USD.map((sizeUsd) => {
+      const routable = sizeUsd <= dexLiq * 0.5;
+      return {
+        sizeUsd,
+        routable,
+        priceImpactPct: routable ? round2((sizeUsd / Math.max(dexLiq, 1)) * 100 * (0.2 + rand() * 0.3)) : null,
+      };
+    });
+
     assets[variant.tokenSymbol] = {
       symbol: variant.tokenSymbol,
       mint: variant.mint,
@@ -74,6 +85,7 @@ for (const asset of ASSETS) {
       lendingSupplyUsd,
       lendingBorrowUsd,
       defiTvlUsd: dexLiq + lendingSupplyUsd,
+      slippage,
     };
   }
 }
