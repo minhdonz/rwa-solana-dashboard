@@ -6,9 +6,11 @@
  * can compare them side by side.
  *
  * `mint`: Solana SPL mint address. Required by `npm run refresh` to fetch holders.
- *   ⚠️ Mints marked null are TODO — fill & verify against Solscan before refreshing
- *   that variant. The refresh script skips null mints (and the UI falls back to the
- *   seed snapshot for that symbol).
+ *   Mints below were resolved via the Jupiter token search API (scripts/resolve-mints.ts)
+ *   and corroborated by issuer naming patterns (xStocks mints start "Xs" / name "… xStock";
+ *   Ondo mints end "ondo" / name "… (Ondo Tokenized)") plus realistic holder counts & mcap.
+ *   `null` = no verified token found (Dinari dShares returned only copycats) — the refresh
+ *   script skips null mints and the UI falls back to the seed snapshot for that symbol.
  */
 
 export interface AssetVariant {
@@ -38,9 +40,9 @@ export const ASSETS: Asset[] = [
     isPrivate: true,
     note: "The flagship tokenized private name. Three issuers shipped variants around the IPO; Solana hit ~99% of cross-chain tokenized-SpaceX volume. Backpack's SPCX crossed 10k holders, ~2x xStocks' SPCXx.",
     variants: [
-      { issuerSlug: "backpack-securities", tokenSymbol: "SPCX", mint: null },
-      { issuerSlug: "xstocks-backed", tokenSymbol: "SPCXx", mint: null },
-      { issuerSlug: "pre-stocks", tokenSymbol: "SPACEX", mint: null },
+      { issuerSlug: "backpack-securities", tokenSymbol: "SPCX", mint: "SPCXxcqXj6e5dJDVNovHN8744zkbhM2bYudU45BimGb" },
+      { issuerSlug: "xstocks-backed", tokenSymbol: "SPCXx", mint: "Xs3oZwbHvqis4NYcf4YKWmEia2eC84wSiVrcYcTqpH8" },
+      { issuerSlug: "pre-stocks", tokenSymbol: "SPACEX", mint: "PreANxuXjsy2pvisWWMNB6YaJNzr7681wJJr2rHsfTh" },
     ],
   },
   {
@@ -49,8 +51,8 @@ export const ASSETS: Asset[] = [
     sector: "Semiconductors",
     note: "Bellwether AI chip name and one of the most-traded tokenized equities on Solana DEXs.",
     variants: [
-      { issuerSlug: "xstocks-backed", tokenSymbol: "NVDAx", mint: null },
-      { issuerSlug: "ondo-global-markets", tokenSymbol: "NVDA.o", mint: null },
+      { issuerSlug: "xstocks-backed", tokenSymbol: "NVDAx", mint: "Xsc9qvGR1efVDFGLrVsmkzv3qi45LTBjeUKSPmx9qEh" },
+      { issuerSlug: "ondo-global-markets", tokenSymbol: "NVDAon", mint: "gEGtLTPNQ7jcg25zTetkbmF7teoDLcrfTnQfmn2ondo" },
       { issuerSlug: "dinari-dshares", tokenSymbol: "dNVDA", mint: null },
     ],
   },
@@ -60,8 +62,8 @@ export const ASSETS: Asset[] = [
     sector: "Automotive / Energy",
     note: "High-retail-interest name with deep DEX liquidity across issuers.",
     variants: [
-      { issuerSlug: "xstocks-backed", tokenSymbol: "TSLAx", mint: null },
-      { issuerSlug: "ondo-global-markets", tokenSymbol: "TSLA.o", mint: null },
+      { issuerSlug: "xstocks-backed", tokenSymbol: "TSLAx", mint: "XsDoVfqeBukxuZHWhdvWHBhgEHjGNst4MLodqsJHzoB" },
+      { issuerSlug: "ondo-global-markets", tokenSymbol: "TSLAon", mint: "KeGv7bsfR4MheC1CkmnAVceoApjrkvBhHYjWb67ondo" },
       { issuerSlug: "dinari-dshares", tokenSymbol: "dTSLA", mint: null },
     ],
   },
@@ -71,8 +73,8 @@ export const ASSETS: Asset[] = [
     sector: "Consumer electronics",
     note: "Core large-cap; part of the Magnificent-7 set most accessed by global traders via Solana.",
     variants: [
-      { issuerSlug: "xstocks-backed", tokenSymbol: "AAPLx", mint: null },
-      { issuerSlug: "ondo-global-markets", tokenSymbol: "AAPL.o", mint: null },
+      { issuerSlug: "xstocks-backed", tokenSymbol: "AAPLx", mint: "XsbEhLAtcf6HdfpFZ5xEMdqW8nfAvcsP5bdudRLJzJp" },
+      { issuerSlug: "ondo-global-markets", tokenSymbol: "AAPLon", mint: "123mYEnRLM2LLYsJW3K6oyYh8uP1fngj732iG638ondo" },
       { issuerSlug: "dinari-dshares", tokenSymbol: "dAAPL", mint: null },
     ],
   },
@@ -82,8 +84,8 @@ export const ASSETS: Asset[] = [
     sector: "Bitcoin treasury",
     note: "Popular crypto-adjacent equity — natural fit for crypto-native holders using DeFi leverage.",
     variants: [
-      { issuerSlug: "xstocks-backed", tokenSymbol: "MSTRx", mint: null },
-      { issuerSlug: "ondo-global-markets", tokenSymbol: "MSTR.o", mint: null },
+      { issuerSlug: "xstocks-backed", tokenSymbol: "MSTRx", mint: "XsP7xzNPvEHS1m6qfanPUGjNmdnmsLKEoNAnHjdxxyZ" },
+      { issuerSlug: "ondo-global-markets", tokenSymbol: "MSTRon", mint: "FSz4ouiqXpHuGPcpacZfTzbMjScoj5FfzHkiyu2ondo" },
     ],
   },
   {
@@ -92,8 +94,8 @@ export const ASSETS: Asset[] = [
     sector: "Crypto exchange",
     note: "Crypto-native equity widely held alongside on-chain positions.",
     variants: [
-      { issuerSlug: "xstocks-backed", tokenSymbol: "COINx", mint: null },
-      { issuerSlug: "ondo-global-markets", tokenSymbol: "COIN.o", mint: null },
+      { issuerSlug: "xstocks-backed", tokenSymbol: "COINx", mint: "Xs7ZdzSHLU9ftNJsii5fCeJhoRWSC32SQGzGQtePxNu" },
+      { issuerSlug: "ondo-global-markets", tokenSymbol: "COINon", mint: "5u6KDiNJXxX4rGMfYT4BApZQC5CuDNrG6MHkwp1ondo" },
     ],
   },
   {
@@ -102,8 +104,8 @@ export const ASSETS: Asset[] = [
     sector: "E-commerce / Cloud",
     note: "Magnificent-7 large-cap available across the major issuers.",
     variants: [
-      { issuerSlug: "xstocks-backed", tokenSymbol: "AMZNx", mint: null },
-      { issuerSlug: "ondo-global-markets", tokenSymbol: "AMZN.o", mint: null },
+      { issuerSlug: "xstocks-backed", tokenSymbol: "AMZNx", mint: "Xs3eBt7uRfJX8QUs4suhyU8p2M6DoUDrJyWBa8LLZsg" },
+      { issuerSlug: "ondo-global-markets", tokenSymbol: "AMZNon", mint: "14Tqdo8V1FhzKsE3W2pFsZCzYPQxxupXRcqw9jv6ondo" },
     ],
   },
   {
@@ -112,8 +114,8 @@ export const ASSETS: Asset[] = [
     sector: "Software / Cloud",
     note: "Magnificent-7 large-cap; part of Kraken's launch lineup.",
     variants: [
-      { issuerSlug: "xstocks-backed", tokenSymbol: "MSFTx", mint: null },
-      { issuerSlug: "ondo-global-markets", tokenSymbol: "MSFT.o", mint: null },
+      { issuerSlug: "xstocks-backed", tokenSymbol: "MSFTx", mint: "XspzcW1PRtgf6Wj92HCiZdjzKCyFekVD8P5Ueh3dRMX" },
+      { issuerSlug: "ondo-global-markets", tokenSymbol: "MSFTon", mint: "FRmH6iRkMr33DLG6zVLR7EM4LojBFAuq6NtFzG6ondo" },
     ],
   },
   {
@@ -122,8 +124,8 @@ export const ASSETS: Asset[] = [
     sector: "Internet / AI",
     note: "Magnificent-7 large-cap accessed globally via Solana tokens.",
     variants: [
-      { issuerSlug: "xstocks-backed", tokenSymbol: "GOOGLx", mint: null },
-      { issuerSlug: "ondo-global-markets", tokenSymbol: "GOOGL.o", mint: null },
+      { issuerSlug: "xstocks-backed", tokenSymbol: "GOOGLx", mint: "XsCPL9dNWBMvFtTmwcCA5v3xWPSMEBCszbQdiLLq6aN" },
+      { issuerSlug: "ondo-global-markets", tokenSymbol: "GOOGLon", mint: "bbahNA5vT9WJeYft8tALrH1LXWffjwqVoUbqYa1ondo" },
     ],
   },
   {
@@ -133,8 +135,8 @@ export const ASSETS: Asset[] = [
     isETF: true,
     note: "Tokenized index exposure — a building block for on-chain diversified strategies.",
     variants: [
-      { issuerSlug: "xstocks-backed", tokenSymbol: "SPYx", mint: null },
-      { issuerSlug: "ondo-global-markets", tokenSymbol: "SPY.o", mint: null },
+      { issuerSlug: "xstocks-backed", tokenSymbol: "SPYx", mint: "XsoCS1TfEyfFhfvj8EtZ528L3CaKBDBRqRapnBbDF2W" },
+      { issuerSlug: "ondo-global-markets", tokenSymbol: "SPYon", mint: "k18WJUULWheRkSpSquYGdNNmtuE2Vbw1hpuUi92ondo" },
     ],
   },
 ];
