@@ -45,7 +45,6 @@ const ISSUER_DEFI_BIAS: Record<string, number> = {
   "kraken-xstocks": 0.7,
   "backpack-securities": 0.4,
   "ondo-global-markets": 0.35,
-  "dinari-dshares": 0.3,
   "pre-stocks": 0.25,
   robinhood: 0.0,
 };

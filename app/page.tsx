@@ -63,7 +63,7 @@ export default function HomePage() {
           </h2>
           <p className="text-sm text-slate-600 mt-2 leading-relaxed">
             Voting, dividends, redemption, custody, DeFi composability and eligibility compared across{" "}
-            {ISSUERS.length} issuers — xStocks, Backpack, Ondo, Dinari, Kraken, Robinhood and others.
+            {ISSUERS.length} issuers — xStocks, Backpack, Ondo, Pre-Stocks, Kraken and Robinhood.
             Every claim sourced.
           </p>
           <span className="text-brand text-sm mt-3 inline-block">View the rights matrix →</span>

@@ -9,8 +9,8 @@
  *   Mints below were resolved via the Jupiter token search API (scripts/resolve-mints.ts)
  *   and corroborated by issuer naming patterns (xStocks mints start "Xs" / name "… xStock";
  *   Ondo mints end "ondo" / name "… (Ondo Tokenized)") plus realistic holder counts & mcap.
- *   `null` = no verified token found (Dinari dShares returned only copycats) — the refresh
- *   script skips null mints and the UI falls back to the seed snapshot for that symbol.
+ *   `null` = no verified token found — the refresh script skips null mints and the UI falls
+ *   back to the seed snapshot for that symbol.
  */
 
 export interface AssetVariant {
@@ -53,7 +53,6 @@ export const ASSETS: Asset[] = [
     variants: [
       { issuerSlug: "xstocks-backed", tokenSymbol: "NVDAx", mint: "Xsc9qvGR1efVDFGLrVsmkzv3qi45LTBjeUKSPmx9qEh" },
       { issuerSlug: "ondo-global-markets", tokenSymbol: "NVDAon", mint: "gEGtLTPNQ7jcg25zTetkbmF7teoDLcrfTnQfmn2ondo" },
-      { issuerSlug: "dinari-dshares", tokenSymbol: "dNVDA", mint: null },
     ],
   },
   {
@@ -64,7 +63,6 @@ export const ASSETS: Asset[] = [
     variants: [
       { issuerSlug: "xstocks-backed", tokenSymbol: "TSLAx", mint: "XsDoVfqeBukxuZHWhdvWHBhgEHjGNst4MLodqsJHzoB" },
       { issuerSlug: "ondo-global-markets", tokenSymbol: "TSLAon", mint: "KeGv7bsfR4MheC1CkmnAVceoApjrkvBhHYjWb67ondo" },
-      { issuerSlug: "dinari-dshares", tokenSymbol: "dTSLA", mint: null },
     ],
   },
   {
@@ -75,7 +73,6 @@ export const ASSETS: Asset[] = [
     variants: [
       { issuerSlug: "xstocks-backed", tokenSymbol: "AAPLx", mint: "XsbEhLAtcf6HdfpFZ5xEMdqW8nfAvcsP5bdudRLJzJp" },
       { issuerSlug: "ondo-global-markets", tokenSymbol: "AAPLon", mint: "123mYEnRLM2LLYsJW3K6oyYh8uP1fngj732iG638ondo" },
-      { issuerSlug: "dinari-dshares", tokenSymbol: "dAAPL", mint: null },
     ],
   },
   {
