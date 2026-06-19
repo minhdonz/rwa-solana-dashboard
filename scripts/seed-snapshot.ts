@@ -1,19 +1,15 @@
 /**
  * Generates an ILLUSTRATIVE seed snapshot (data/snapshot.json) so the UI renders
- * before anyone runs the real `npm run refresh`. Figures are self-consistent
- * (venue slices sum to the tracked supply, unknown <= threshold) but are NOT real
- * on-chain data — the snapshot is flagged `isSeed: true` and the UI warns loudly.
+ * before anyone runs the real `npm run refresh`. Figures are self-consistent but NOT
+ * real — the snapshot is flagged `isSeed: true` and the UI warns loudly.
  *
- * Run with: npx tsx scripts/seed-snapshot.ts
+ * Run: npx tsx scripts/seed-snapshot.ts
  */
 import { writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { ASSETS } from "../data/assets";
-import { VENUE_BUCKETS, type VenueBucket } from "../lib/venues";
+import type { AssetSnapshot, LendingReserve } from "../lib/snapshot";
 
-const UNKNOWN_THRESHOLD = 15;
-
-// Deterministic PRNG so the seed is reproducible.
 function mulberry32(seed: number) {
   return function () {
     seed |= 0;
@@ -32,100 +28,61 @@ function hash(s: string) {
   return h >>> 0;
 }
 
-// Known/approximate holder counts from public reporting (illustrative anchors).
-const KNOWN_HOLDERS: Record<string, number> = {
-  SPCX: 10200,
-  SPCXx: 5400,
-  SPACEX: 1300,
-};
+// xStocks are the DeFi-composable issuer; others have little/no lending coverage.
+const HAS_KAMINO = (slug: string) => slug === "xstocks-backed";
 
-// Issuers with deep DeFi composability skew toward LP/lending; closed ones skew to CEX.
-const ISSUER_DEFI_BIAS: Record<string, number> = {
-  "xstocks-backed": 1.0,
-  "kraken-xstocks": 0.7,
-  "backpack-securities": 0.4,
-  "ondo-global-markets": 0.35,
-  "pre-stocks": 0.25,
-  robinhood: 0.0,
-};
-
-function buildVenues(rand: () => number, defiBias: number, supply: number) {
-  // Base weights per bucket, modulated by issuer DeFi bias.
-  const weights: Record<VenueBucket, number> = {
-    "Self-custody wallet": 30 + rand() * 15,
-    "Issuer treasury": 15 + rand() * 35,
-    "Raydium LP": (8 + rand() * 12) * (0.3 + defiBias),
-    "Orca LP": (3 + rand() * 7) * (0.3 + defiBias),
-    "Kamino (lending)": (6 + rand() * 14) * (0.2 + defiBias),
-    Jupiter: (1 + rand() * 3) * (0.3 + defiBias),
-    "CEX wallet": (15 + rand() * 20) * (1.3 - defiBias),
-    "Other / unknown": 4 + rand() * (UNKNOWN_THRESHOLD - 5), // keep < threshold
-  };
-  const total = Object.values(weights).reduce((a, b) => a + b, 0);
-  return VENUE_BUCKETS.map((bucket) => {
-    const pct = (weights[bucket] / total) * 100;
-    return { bucket, pct: round(pct), amount: Math.round((pct / 100) * supply) };
-  });
-}
-
-const round = (n: number) => Math.round(n * 10) / 10;
-
-const assets: Record<string, unknown> = {};
+const assets: Record<string, AssetSnapshot> = {};
 
 for (const asset of ASSETS) {
-  asset.variants.forEach((variant, idx) => {
-    const seed = hash(variant.tokenSymbol);
-    const rand = mulberry32(seed);
-    const defiBias = ISSUER_DEFI_BIAS[variant.issuerSlug] ?? 0.4;
+  for (const variant of asset.variants) {
+    const rand = mulberry32(hash(variant.tokenSymbol));
+    const holders = Math.round(1000 + rand() * 40000);
+    const price = Math.round((40 + rand() * 700) * 100) / 100;
+    const mcap = Math.round(holders * price * (5 + rand() * 30));
+    const dexLiq = Math.round(mcap * (0.02 + rand() * 0.08));
+    const vol = Math.round(dexLiq * (0.5 + rand() * 4));
 
-    const holders =
-      KNOWN_HOLDERS[variant.tokenSymbol] ?? Math.round(400 + rand() * 6000 * (idx === 0 ? 1.4 : 1));
-    const price = round(40 + rand() * 400);
-    const supply = Math.round(holders * (8 + rand() * 40));
-    const marketCap = Math.round(supply * price);
-    const volume24h = Math.round(marketCap * (0.02 + rand() * 0.18));
-
-    const venues = buildVenues(rand, defiBias, supply);
-    const unknownPct = venues.find((v) => v.bucket === "Other / unknown")!.pct;
-
-    // A few representative top holders, labelled by their (non-unknown) bucket.
-    const labelled = venues.filter((v) => v.bucket !== "Other / unknown" && v.pct > 1);
-    const topHolders = labelled.slice(0, 5).map((v, i) => ({
-      owner: fakeAddr(rand),
-      label: `${v.bucket} #${i + 1}`,
-      bucket: v.bucket,
-      amount: Math.round(v.amount * (0.3 + rand() * 0.4)),
-      pct: round(v.pct * (0.3 + rand() * 0.4)),
-    }));
+    let lending: LendingReserve[] = [];
+    if (HAS_KAMINO(variant.issuerSlug)) {
+      const supply = Math.round(mcap * (0.02 + rand() * 0.1));
+      const util = round2(2 + rand() * 10);
+      lending = [
+        {
+          protocol: "Kamino",
+          market: "xStocks Market",
+          supplyUsd: supply,
+          borrowUsd: Math.round(supply * (util / 100)),
+          utilization: util,
+          supplyApy: round2((util / 100) * 4),
+          borrowApy: round2(3.85 + rand() * 0.3),
+          maxLtv: Math.round((0.3 + rand() * 0.45) * 100) / 100,
+        },
+      ];
+    }
+    const lendingSupplyUsd = lending.reduce((s, r) => s + r.supplyUsd, 0);
+    const lendingBorrowUsd = lending.reduce((s, r) => s + r.borrowUsd, 0);
 
     assets[variant.tokenSymbol] = {
       symbol: variant.tokenSymbol,
       mint: variant.mint,
       holders,
       priceUsd: price,
-      marketCapUsd: marketCap,
-      volume24hUsd: volume24h,
-      venues,
-      topHolders,
-      unknownPct,
+      marketCapUsd: mcap,
+      volume24hUsd: vol,
+      dexLiquidityUsd: dexLiq,
+      lending,
+      lendingSupplyUsd,
+      lendingBorrowUsd,
+      defiTvlUsd: dexLiq + lendingSupplyUsd,
     };
-  });
+  }
 }
 
-function fakeAddr(rand: () => number) {
-  const chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz123456789";
-  let s = "";
-  for (let i = 0; i < 44; i++) s += chars[Math.floor(rand() * chars.length)];
-  return s;
+function round2(n: number) {
+  return Math.round(n * 100) / 100;
 }
 
-const out = {
-  snapshotTakenAt: new Date().toISOString(),
-  isSeed: true,
-  unknownThresholdPct: UNKNOWN_THRESHOLD,
-  assets,
-};
-
+const out = { snapshotTakenAt: new Date().toISOString(), isSeed: true, assets };
 const path = join(process.cwd(), "data", "snapshot.json");
 writeFileSync(path, JSON.stringify(out, null, 2) + "\n");
 console.log(`Wrote illustrative seed snapshot for ${Object.keys(assets).length} tokens -> ${path}`);

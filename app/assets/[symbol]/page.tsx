@@ -2,13 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import SnapshotBanner from "@/components/SnapshotBanner";
-import VenueChart from "@/components/VenueChart";
-import HolderConcentration from "@/components/HolderConcentration";
+import DefiCoverage from "@/components/DefiCoverage";
 import StatCard from "@/components/StatCard";
 import { ASSETS, getAsset, type AssetVariant } from "@/data/assets";
 import { getIssuer } from "@/data/issuers";
 import { getAssetSnapshot } from "@/lib/snapshot";
-import { formatNumber, formatPct, formatUsd } from "@/lib/format";
+import { formatNumber, formatUsd } from "@/lib/format";
 
 export function generateStaticParams() {
   return ASSETS.map((a) => ({ symbol: a.symbol }));
@@ -16,7 +15,7 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: { symbol: string } }): Metadata {
   const asset = getAsset(params.symbol);
-  return { title: asset ? `${asset.name} — Tokenized variants & holdings` : "Asset not found" };
+  return { title: asset ? `${asset.name} — DeFi utilization by issuer` : "Asset not found" };
 }
 
 export default function AssetDetailPage({ params }: { params: { symbol: string } }) {
@@ -42,7 +41,8 @@ export default function AssetDetailPage({ params }: { params: { symbol: string }
 
       <p className="text-sm text-slate-600">
         <span className="text-navy font-medium">{asset.variants.length} issuer variant(s).</span> The same
-        underlying, wrapped differently — compare holders and where each token is used.
+        underlying, wrapped differently — compare holders and how much of each is actually deployed in
+        DeFi (tradeable liquidity and lending/borrow demand).
       </p>
 
       <div className="space-y-6">
@@ -87,38 +87,14 @@ function VariantPanel({ variant }: { variant: AssetVariant }) {
       {!snap ? (
         <p className="text-sm text-neutral px-5 py-4">No snapshot data for this variant yet.</p>
       ) : (
-        <div className="p-5">
+        <div className="p-5 space-y-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-line border border-line">
             <StatCard label="Holders" value={formatNumber(snap.holders)} />
             <StatCard label="Market cap" value={formatUsd(snap.marketCapUsd, { compact: true })} />
             <StatCard label="24h volume" value={formatUsd(snap.volume24hUsd, { compact: true })} />
-            <StatCard
-              label="Unknown venue"
-              value={formatPct(snap.unknownPct)}
-              sub={snap.unknownPct != null && snap.unknownPct > 15 ? "over 15% cap" : "within 15% cap"}
-            />
+            <StatCard label="Price" value={formatUsd(snap.priceUsd)} />
           </div>
-
-          {snap.reviewFlags && snap.reviewFlags.length > 0 && (
-            <div className="mt-4 border-l-2 border-caution bg-caution/5 px-4 py-2.5 text-xs text-slate-600">
-              <span className="font-semibold text-caution tracking-label uppercase text-[0.6875rem]">
-                {snap.reviewFlags.length} unlabeled large holder(s)
-              </span>{" "}
-              counted as self-custody but likely an exchange or protocol — attribution may understate the
-              CEX share until labeled.
-            </div>
-          )}
-
-          <div className="grid lg:grid-cols-2 gap-8 mt-6">
-            <div>
-              <h3 className="eyebrow mb-1">Where it&apos;s held / used</h3>
-              <VenueChart venues={snap.venues} />
-            </div>
-            <div>
-              <h3 className="eyebrow mb-3">Largest holders, by venue</h3>
-              <HolderConcentration holders={snap.topHolders} />
-            </div>
-          </div>
+          <DefiCoverage snap={snap} />
         </div>
       )}
     </section>

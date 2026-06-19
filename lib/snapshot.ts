@@ -5,55 +5,44 @@
  * produced by `npm run refresh` (scripts/refresh-snapshot.ts). Every snapshot
  * carries `snapshotTakenAt` so the UI can stamp "Data as of <timestamp>".
  *
- * When `isSeed` is true the figures are an illustrative placeholder (the repo
- * ships one so the UI renders before you run the refresh with real API keys).
+ * The deep-dive is built around DeFi utilization: how much of each tokenized stock
+ * is deployed in DeFi (DEX liquidity + lending) and the borrow/lend demand for it.
  */
 import snapshotJson from "@/data/snapshot.json";
-import { type VenueBucket } from "./venues";
 
-export { VENUE_BUCKETS, VENUE_COLORS, type VenueBucket } from "./venues";
-
-export interface VenueSlice {
-  bucket: VenueBucket;
-  amount: number; // token units
-  pct: number; // 0..100 of circulating supply held in tracked accounts
-}
-
-export interface TopHolder {
-  owner: string;
-  label: string | null; // e.g. "Kamino main reserve", null if unknown
-  bucket: VenueBucket;
-  amount: number;
-  pct: number;
-}
-
-/** A large holder we could not attribute to a venue — likely an unlabeled CEX/protocol. */
-export interface ReviewFlag {
-  owner: string;
-  bucket: VenueBucket; // what it defaulted to (usually "Self-custody wallet")
-  amount: number;
-  pct: number;
+/** One Kamino lending reserve for a token (a token can be in several markets). */
+export interface LendingReserve {
+  protocol: "Kamino";
+  market: string;
+  supplyUsd: number;
+  borrowUsd: number;
+  utilization: number; // 0..100
+  supplyApy: number; // %
+  borrowApy: number; // %
+  maxLtv: number; // 0..1
 }
 
 export interface AssetSnapshot {
-  symbol: string; // token symbol, e.g. "SPCXx"
+  symbol: string;
   mint: string | null;
   holders: number | null;
   priceUsd: number | null;
   marketCapUsd: number | null;
   volume24hUsd: number | null;
-  venues: VenueSlice[];
-  topHolders: TopHolder[];
-  unknownPct: number | null; // % of supply in "Other / unknown" — gated at <=15 by refresh
-  /** Large unlabeled holders flagged for manual classification (may be omitted/empty). */
-  reviewFlags?: ReviewFlag[];
+  /** Tradeable DEX liquidity across Solana AMMs (USD). */
+  dexLiquidityUsd: number | null;
+  /** Kamino lending reserves for this token (empty = not listed for lending). */
+  lending: LendingReserve[];
+  /** Convenience aggregates over `lending`. */
+  lendingSupplyUsd: number;
+  lendingBorrowUsd: number;
+  /** DEX liquidity + lending supply (USD) — the token's total DeFi footprint. */
+  defiTvlUsd: number;
 }
 
 export interface Snapshot {
-  snapshotTakenAt: string | null; // ISO timestamp
+  snapshotTakenAt: string | null;
   isSeed: boolean;
-  /** Max acceptable Other/unknown % the refresh script enforces. */
-  unknownThresholdPct: number;
   /** keyed by token symbol */
   assets: Record<string, AssetSnapshot>;
 }

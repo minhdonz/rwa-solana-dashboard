@@ -31,9 +31,7 @@ export default function SnapshotBanner() {
         Data as of {absolute}
       </span>
       {relative && <span className="text-neutral">({relative})</span>}
-      <span className="text-neutral">
-        · point-in-time on-chain snapshot · unknown-venue cap {snap.unknownThresholdPct}%
-      </span>
+      <span className="text-neutral">· point-in-time snapshot · Jupiter + Kamino</span>
     </div>
   );
 }

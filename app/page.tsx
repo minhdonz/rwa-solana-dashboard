@@ -71,12 +71,12 @@ export default function HomePage() {
         <Link href="/assets" className="bg-paper p-6 hover:bg-surface group">
           <p className="eyebrow">Section 02</p>
           <h2 className="font-serif text-xl font-semibold text-navy mt-1 group-hover:text-brand">
-            Leading tokens &amp; where they live
+            Leading tokens &amp; their DeFi utilization
           </h2>
           <p className="text-sm text-slate-600 mt-2 leading-relaxed">
-            For the top tokenized stocks, review total holders and venue distribution — wallets versus
-            Raydium/Orca LPs, Kamino lending, Jupiter and exchange wallets — with issuer variants side by
-            side.
+            For the top tokenized stocks, see how much is actually deployed in DeFi — tradeable DEX
+            liquidity plus collateral supplied and borrowed in lending markets (Kamino) — with issuer
+            variants side by side.
           </p>
           <span className="text-brand text-sm mt-3 inline-block">Explore the tokens →</span>
         </Link>

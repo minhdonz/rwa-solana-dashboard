@@ -7,80 +7,118 @@ import { getAssetSnapshot } from "@/lib/snapshot";
 import { formatNumber, formatUsd } from "@/lib/format";
 
 export const metadata: Metadata = {
-  title: "Top Tokenized Stocks on Solana — Where They're Held",
+  title: "Tokenized Stocks on Solana — DeFi Utilization",
 };
 
+interface Row {
+  symbol: string;
+  name: string;
+  sector: string;
+  isPrivate?: boolean;
+  isETF?: boolean;
+  variants: { tokenSymbol: string; issuerSlug: string }[];
+  holders: number;
+  defiTvlUsd: number;
+  borrowUsd: number;
+  lendingSupplyUsd: number;
+}
+
 export default function AssetsPage() {
+  const rows: Row[] = ASSETS.map((asset) => {
+    const snaps = asset.variants.map((v) => getAssetSnapshot(v.tokenSymbol)).filter(Boolean);
+    return {
+      symbol: asset.symbol,
+      name: asset.name,
+      sector: asset.sector,
+      isPrivate: asset.isPrivate,
+      isETF: asset.isETF,
+      variants: asset.variants,
+      holders: sum(snaps.map((s) => s!.holders ?? 0)),
+      defiTvlUsd: sum(snaps.map((s) => s!.defiTvlUsd ?? 0)),
+      borrowUsd: sum(snaps.map((s) => s!.lendingBorrowUsd ?? 0)),
+      lendingSupplyUsd: sum(snaps.map((s) => s!.lendingSupplyUsd ?? 0)),
+    };
+  }).sort((a, b) => b.defiTvlUsd - a.defiTvlUsd);
+
   return (
     <div className="space-y-6">
       <header className="max-w-3xl border-b border-line pb-6">
-        <p className="eyebrow mb-2">Reference · Holdings analysis</p>
+        <p className="eyebrow mb-2">Reference · DeFi utilization</p>
         <h1 className="font-serif text-3xl font-semibold text-navy leading-tight">
-          Leading tokenized stocks
+          Where tokenized stocks are actually used in DeFi
         </h1>
         <p className="text-slate-600 leading-relaxed mt-3">
-          The most significant tokenized stocks on Solana, each frequently issued in several variants.
-          Open an asset to review total holders and the venue distribution — the share held in
-          self-custody wallets versus DEX liquidity, lending collateral, and exchange wallets — and to
-          compare issuer variants side by side.
+          Holding a tokenized stock is one thing; <em>using</em> it is another. This ranks the leading
+          names by their DeFi footprint — tradeable DEX liquidity plus how much is supplied as collateral
+          and borrowed against in lending markets (Kamino). Open one to compare issuer variants.
         </p>
       </header>
 
       <SnapshotBanner />
 
-      <div className="border border-line bg-paper">
-        <div className="hidden md:grid grid-cols-[1fr_140px_140px_minmax(220px,1fr)] gap-4 px-5 py-2.5 border-b border-line-strong bg-surface eyebrow">
-          <span>Asset</span>
-          <span className="text-right">Holders</span>
-          <span className="text-right">Market cap</span>
-          <span>Issuer variants</span>
-        </div>
-        {ASSETS.map((asset) => {
-          const totalHolders = asset.variants.reduce(
-            (sum, v) => sum + (getAssetSnapshot(v.tokenSymbol)?.holders ?? 0),
-            0
-          );
-          const totalMcap = asset.variants.reduce(
-            (sum, v) => sum + (getAssetSnapshot(v.tokenSymbol)?.marketCapUsd ?? 0),
-            0
-          );
-          return (
-            <Link
-              key={asset.symbol}
-              href={`/assets/${asset.symbol}`}
-              className="grid md:grid-cols-[1fr_140px_140px_minmax(220px,1fr)] gap-x-4 gap-y-2 px-5 py-4 border-b border-line last:border-0 hover:bg-surface group"
-            >
-              <div>
-                <div className="font-semibold text-navy group-hover:text-brand">{asset.name}</div>
-                <div className="text-xs text-neutral mt-0.5">
-                  {asset.sector}
-                  {asset.isPrivate && " · private"}
-                  {asset.isETF && " · ETF"}
-                </div>
-              </div>
-              <div className="md:text-right text-sm text-slate-700 tnum">
-                {formatNumber(totalHolders, { compact: true })}
-                <span className="md:hidden text-neutral"> holders</span>
-              </div>
-              <div className="md:text-right text-sm text-slate-700 tnum">
-                {formatUsd(totalMcap, { compact: true })}
-                <span className="md:hidden text-neutral"> mcap</span>
-              </div>
-              <div className="flex flex-wrap gap-1.5 self-center">
-                {asset.variants.map((v) => (
-                  <span
-                    key={v.tokenSymbol}
-                    className="text-xs bg-surface2 px-2 py-0.5 text-slate-600 border border-line font-mono"
-                  >
-                    {v.tokenSymbol}
-                    <span className="text-neutral"> · {getIssuer(v.issuerSlug)?.shortName}</span>
-                  </span>
-                ))}
-              </div>
-            </Link>
-          );
-        })}
+      <div className="border border-line bg-paper overflow-x-auto">
+        <table className="w-full text-sm border-collapse min-w-[760px]">
+          <thead>
+            <tr className="bg-surface border-b border-line-strong eyebrow">
+              <th className="text-left px-4 py-2.5">Asset</th>
+              <th className="text-right px-4 py-2.5">Holders</th>
+              <th className="text-right px-4 py-2.5">DeFi footprint</th>
+              <th className="text-right px-4 py-2.5">Lending supply</th>
+              <th className="text-right px-4 py-2.5">Borrowed</th>
+              <th className="text-left px-4 py-2.5">Variants</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((r) => (
+              <tr key={r.symbol} className="border-b border-line last:border-0 hover:bg-surface">
+                <td className="px-4 py-3">
+                  <Link href={`/assets/${r.symbol}`} className="font-semibold text-navy hover:text-brand">
+                    {r.name}
+                  </Link>
+                  <div className="text-xs text-neutral mt-0.5">
+                    {r.sector}
+                    {r.isPrivate && " · private"}
+                    {r.isETF && " · ETF"}
+                  </div>
+                </td>
+                <td className="px-4 py-3 text-right tnum text-slate-700">
+                  {formatNumber(r.holders, { compact: true })}
+                </td>
+                <td className="px-4 py-3 text-right tnum font-medium text-navy">
+                  {formatUsd(r.defiTvlUsd, { compact: true })}
+                </td>
+                <td className="px-4 py-3 text-right tnum text-slate-700">
+                  {r.lendingSupplyUsd > 0 ? formatUsd(r.lendingSupplyUsd, { compact: true }) : "—"}
+                </td>
+                <td className="px-4 py-3 text-right tnum text-slate-700">
+                  {r.borrowUsd > 0 ? formatUsd(r.borrowUsd, { compact: true }) : "—"}
+                </td>
+                <td className="px-4 py-3">
+                  <div className="flex flex-wrap gap-1.5">
+                    {r.variants.map((v) => (
+                      <span
+                        key={v.tokenSymbol}
+                        className="text-xs bg-surface2 px-2 py-0.5 text-slate-600 border border-line font-mono"
+                      >
+                        {v.tokenSymbol}
+                        <span className="text-neutral"> · {getIssuer(v.issuerSlug)?.shortName}</span>
+                      </span>
+                    ))}
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
+      <p className="text-xs text-neutral">
+        DeFi footprint = DEX liquidity + lending supply. Lending data from Kamino; liquidity, price and
+        holders from Jupiter. Ranked by DeFi footprint.
+      </p>
     </div>
   );
+}
+
+function sum(xs: number[]): number {
+  return xs.reduce((a, b) => a + b, 0);
 }
