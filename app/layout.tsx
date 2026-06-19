@@ -59,7 +59,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <footer className="border-t border-line bg-surface mt-16">
           <div className="mx-auto max-w-screen-2xl px-6 py-8 text-xs text-neutral leading-relaxed space-y-2">
-            <p className="font-semibold text-slate-700 tracking-label uppercase text-[0.6875rem]">
+            <p className="text-slate-700">
+              Built by minhdonz.{" "}
+              <a href="mailto:minhdonznft@gmail.com" className="text-brand hover:underline">
+                minhdonznft@gmail.com
+              </a>{" "}
+              ·{" "}
+              <a
+                href="https://github.com/minhdonz/rwa-solana-dashboard"
+                target="_blank"
+                rel="noreferrer"
+                className="text-brand hover:underline"
+              >
+                GitHub
+              </a>
+            </p>
+            <p className="font-semibold text-slate-700 tracking-label uppercase text-[0.6875rem] pt-2">
               Important disclosures
             </p>
             <p>
