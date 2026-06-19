@@ -99,6 +99,16 @@ function VariantPanel({ variant }: { variant: AssetVariant }) {
             />
           </div>
 
+          {snap.reviewFlags && snap.reviewFlags.length > 0 && (
+            <div className="mt-4 border-l-2 border-caution bg-caution/5 px-4 py-2.5 text-xs text-slate-600">
+              <span className="font-semibold text-caution tracking-label uppercase text-[0.6875rem]">
+                {snap.reviewFlags.length} unlabeled large holder(s)
+              </span>{" "}
+              counted as self-custody but likely an exchange or protocol — attribution may understate the
+              CEX share until labeled.
+            </div>
+          )}
+
           <div className="grid lg:grid-cols-2 gap-8 mt-6">
             <div>
               <h3 className="eyebrow mb-1">Where it&apos;s held / used</h3>

@@ -23,6 +23,10 @@ import { getMarketData } from "../lib/market";
 import { VENUE_BUCKETS, type VenueBucket } from "../lib/venues";
 
 const UNKNOWN_THRESHOLD_PCT = 15;
+// Any single *unlabeled* wallet holding >= this % of tracked supply is almost certainly a
+// CEX/protocol we haven't labeled (a real individual rarely holds this much). Flag it so the
+// gap is visible instead of silently counted as self-custody.
+const LARGE_UNLABELED_PCT = 3;
 const FORCE = process.argv.includes("--force");
 
 interface OutAsset {
@@ -35,6 +39,7 @@ interface OutAsset {
   venues: { bucket: VenueBucket; amount: number; pct: number }[];
   topHolders: { owner: string; label: string | null; bucket: VenueBucket; amount: number; pct: number }[];
   unknownPct: number | null;
+  reviewFlags: { owner: string; bucket: VenueBucket; amount: number; pct: number }[];
 }
 
 async function processVariant(symbol: string, mint: string): Promise<OutAsset> {
@@ -60,6 +65,18 @@ async function processVariant(symbol: string, mint: string): Promise<OutAsset> {
   });
   const unknownPct = venues.find((v) => v.bucket === "Other / unknown")!.pct;
 
+  // Large unlabeled wallets => likely unlabeled CEX/protocol. Surface for manual classification.
+  const reviewFlags = enriched
+    .map((h) => ({ ...h, pct: round((h.amount / tracked) * 100) }))
+    .filter(
+      (h) =>
+        h.label === null &&
+        (h.bucket === "Self-custody wallet" || h.bucket === "Other / unknown") &&
+        h.pct >= LARGE_UNLABELED_PCT
+    )
+    .sort((a, b) => b.pct - a.pct)
+    .map((h) => ({ owner: h.owner, bucket: h.bucket, amount: Math.round(h.amount), pct: h.pct }));
+
   const topHolders = [...enriched]
     .sort((a, b) => b.amount - a.amount)
     .slice(0, 10)
@@ -76,6 +93,12 @@ async function processVariant(symbol: string, mint: string): Promise<OutAsset> {
     `  unknown: ${unknownPct}% ${unknownPct > UNKNOWN_THRESHOLD_PCT ? "❌ OVER CAP" : "✓"}` +
       (market.priceUsd ? ` · $${market.priceUsd}` : "")
   );
+  if (reviewFlags.length) {
+    console.log(`  ⚑ ${reviewFlags.length} large unlabeled wallet(s) — likely CEX/protocol, please label:`);
+    for (const f of reviewFlags) {
+      console.log(`      ${f.pct}%  ${f.owner}  (now counted as ${f.bucket})`);
+    }
+  }
 
   return {
     symbol,
@@ -87,6 +110,7 @@ async function processVariant(symbol: string, mint: string): Promise<OutAsset> {
     venues,
     topHolders,
     unknownPct,
+    reviewFlags,
   };
 }
 
@@ -117,6 +141,17 @@ async function main() {
   }
 
   console.log(`\nProcessed ${processed} variant(s), skipped ${skipped} (missing mint).`);
+
+  const flagged = Object.values(assets).filter((a) => a.reviewFlags.length);
+  if (flagged.length) {
+    const total = flagged.reduce((n, a) => n + a.reviewFlags.length, 0);
+    console.log(
+      `\n⚑ ${total} large unlabeled wallet(s) across ${flagged.length} token(s): ` +
+        `${flagged.map((a) => a.symbol).join(", ")}.\n` +
+        `   Check each on Solscan; if it's an exchange/protocol, add it to data/venueLabels.ts ` +
+        `(ADDRESS_LABELS) so it lands in the right bucket, then re-run.`
+    );
+  }
 
   if (offenders.length && !FORCE) {
     console.error(

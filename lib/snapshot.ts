@@ -27,6 +27,14 @@ export interface TopHolder {
   pct: number;
 }
 
+/** A large holder we could not attribute to a venue — likely an unlabeled CEX/protocol. */
+export interface ReviewFlag {
+  owner: string;
+  bucket: VenueBucket; // what it defaulted to (usually "Self-custody wallet")
+  amount: number;
+  pct: number;
+}
+
 export interface AssetSnapshot {
   symbol: string; // token symbol, e.g. "SPCXx"
   mint: string | null;
@@ -37,6 +45,8 @@ export interface AssetSnapshot {
   venues: VenueSlice[];
   topHolders: TopHolder[];
   unknownPct: number | null; // % of supply in "Other / unknown" — gated at <=15 by refresh
+  /** Large unlabeled holders flagged for manual classification (may be omitted/empty). */
+  reviewFlags?: ReviewFlag[];
 }
 
 export interface Snapshot {

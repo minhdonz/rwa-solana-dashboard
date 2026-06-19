@@ -37,12 +37,32 @@ export const PROGRAM_BUCKETS: Record<string, { bucket: VenueBucket; label: strin
   LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo: { bucket: "Raydium LP", label: "Meteora DLMM" },
 };
 
-/** Specific owner addresses (CEX hot wallets, treasuries, etc.). */
+/**
+ * Specific owner addresses (CEX hot wallets, treasuries, etc.).
+ *
+ * Why this matters: a CEX hot wallet is an ordinary system-owned account — structurally
+ * identical to a user's self-custody wallet. Without an explicit entry here it is bucketed
+ * as "Self-custody wallet", silently understating CEX custody. The refresh script's
+ * large-unlabeled-holder flag (LARGE_UNLABELED_PCT) surfaces any sizeable wallet that is
+ * still unlabeled so you can classify it.
+ *
+ * Each active entry below cites a Solscan label. The exchanges that actually custody
+ * tokenized stocks (Kraken, Bybit, Backpack, Gate, Bitget, Crypto.com) are the ones worth
+ * adding — verify their Solana hot-wallet addresses on Solscan/Arkham before enabling.
+ */
 export const ADDRESS_LABELS: Record<string, { bucket: VenueBucket; label: string }> = {
-  // TODO: fill verified CEX hot-wallet addresses before relying on the CEX bucket, e.g.:
-  // "5tzFkiKscXHK5ZXCGbXZxdw7gTjjD1mBwuoFbhUvuAi9": { bucket: "CEX wallet", label: "Binance hot wallet" },
-  // Without these, exchange-custodied supply falls into "Other / unknown" and will (correctly)
-  // push the unknown % up, signalling that labels need extending.
+  // Verified via Solscan account labels:
+  GJRs4FwHtemZ5ZE9x3FNvJ8TMwitKTh21yxdRPqn7npE: { bucket: "CEX wallet", label: "Coinbase" }, // solscan.io/account/GJRs4FwHtemZ5ZE9x3FNvJ8TMwitKTh21yxdRPqn7npE (Coinbase Hot Wallet 2)
+  "53unSgGWqEWANcPYRF35B2Bgf8BkszUtcccKiXwGGLyr": { bucket: "CEX wallet", label: "Binance.US" }, // solscan.io/account/53unSgGWqEWANcPYRF35B2Bgf8BkszUtcccKiXwGGLyr
+  "9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM": { bucket: "CEX wallet", label: "Binance" }, // solscan.io/account/9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM (Binance hot wallet)
+
+  // TODO — verify on Solscan/Arkham, then uncomment. These are the venues that custody
+  // tokenized stocks, so they have the highest impact on the CEX bucket here:
+  // "<kraken_sol_hot_wallet>":  { bucket: "CEX wallet", label: "Kraken" },
+  // "<bybit_sol_hot_wallet>":   { bucket: "CEX wallet", label: "Bybit" },
+  // "<backpack_sol_hot_wallet>":{ bucket: "CEX wallet", label: "Backpack" },
+  // "<gate_sol_hot_wallet>":    { bucket: "CEX wallet", label: "Gate" },
+  // "<bitget_sol_hot_wallet>":  { bucket: "CEX wallet", label: "Bitget" },
 };
 
 /** Programs that mean "an ordinary self-custody wallet holds this". */
