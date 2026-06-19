@@ -1,0 +1,66 @@
+name: Refresh data & deploy to Pages
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 0,12 * * *" # every 12 hours (00:00 and 12:00 UTC)
+  workflow_dispatch: {} # manual "Run workflow" button
+
+# Allow committing the refreshed snapshot and deploying to Pages.
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Never run two deploys at once.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      # Pull the latest on-chain DeFi data (keyless: Jupiter + Kamino).
+      - name: Refresh snapshot
+        run: npm run refresh
+
+      # Commit the refreshed snapshot back (GITHUB_TOKEN pushes don't retrigger CI).
+      - name: Commit snapshot if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet -- data/snapshot.json; then
+            git add data/snapshot.json
+            git commit -m "chore: refresh snapshot [skip ci]"
+            git push
+          else
+            echo "No snapshot changes."
+          fi
+
+      - name: Build static export
+        run: npm run build
+        env:
+          GITHUB_PAGES: "true"
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+      - id: deploy
+        uses: actions/deploy-pages@v4
