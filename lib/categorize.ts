@@ -26,16 +26,20 @@ export function categorizeOwner(owner: string, ownerProgram: string | null): Cat
   if (explicit) return { bucket: explicit.bucket, label: explicit.label };
 
   // 2. Protocol-owned account (LP/lending vault PDA).
-  if (ownerProgram) {
-    const prog = PROGRAM_BUCKETS[ownerProgram];
-    if (prog) return { bucket: prog.bucket, label: prog.label };
+  // 2. A null owner-account means an *unfunded* ordinary wallet (a protocol vault always has
+  //    its program as the funded owner). Treat as self-custody; the large-holder flag still
+  //    surfaces it for manual review if it is sizeable.
+  if (ownerProgram === null) return { bucket: "Self-custody wallet", label: null };
 
-    // 3. Ordinary system-owned wallet => self-custody.
-    if (WALLET_OWNER_PROGRAMS.has(ownerProgram)) {
-      return { bucket: "Self-custody wallet", label: null };
-    }
+  // 3. Protocol-owned account (LP / lending vault PDA).
+  const prog = PROGRAM_BUCKETS[ownerProgram];
+  if (prog) return { bucket: prog.bucket, label: prog.label };
+
+  // 4. Ordinary system-owned wallet => self-custody.
+  if (WALLET_OWNER_PROGRAMS.has(ownerProgram)) {
+    return { bucket: "Self-custody wallet", label: null };
   }
 
-  // 4. Unrecognised program / missing info => unknown (counts against the 15% cap).
+  // 5. Resolved but unrecognised program => unknown (counts against the 15% cap).
   return { bucket: "Other / unknown", label: null };
 }

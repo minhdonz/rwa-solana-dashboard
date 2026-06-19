@@ -13,13 +13,17 @@
  * GATE: if any asset's "Other / unknown" % exceeds UNKNOWN_THRESHOLD_PCT (15), the script
  * exits non-zero and tells you to extend data/venueLabels.ts. Pass --force to write anyway.
  */
-import "dotenv/config";
-import { writeFileSync } from "node:fs";
+import { config } from "dotenv";
+// Load .env.local first (where keys live, per the README), then .env as a fallback.
+config({ path: ".env.local" });
+config();
+import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { ASSETS } from "../data/assets";
 import { categorizeOwner } from "../lib/categorize";
 import { getHolders, getMintInfo, getOwnerPrograms } from "../lib/helius";
 import { getMarketData } from "../lib/market";
+import { SYSTEM_PROGRAM } from "../data/venueLabels";
 import { VENUE_BUCKETS, type VenueBucket } from "../lib/venues";
 
 const UNKNOWN_THRESHOLD_PCT = 15;
@@ -27,6 +31,13 @@ const UNKNOWN_THRESHOLD_PCT = 15;
 // CEX/protocol we haven't labeled (a real individual rarely holds this much). Flag it so the
 // gap is visible instead of silently counted as self-custody.
 const LARGE_UNLABELED_PCT = 3;
+
+// Venue positions (LP / lending / CEX) are always sizeable holders, never dust. So we only
+// fetch the program-owner (the costly RPC) for holders above this share of supply, capped at
+// MAX_RESOLVE accounts. The long tail below it is treated as individual self-custody. This
+// cuts owner-lookups ~50x on large tokens while preserving venue attribution.
+const RESOLVE_THRESHOLD_PCT = Number(process.env.RESOLVE_THRESHOLD_PCT ?? 0.05);
+const MAX_RESOLVE = Number(process.env.MAX_RESOLVE ?? 600);
 const FORCE = process.argv.includes("--force");
 
 interface OutAsset {
@@ -48,12 +59,25 @@ async function processVariant(symbol: string, mint: string): Promise<OutAsset> {
   const holders = await getHolders(mint, decimals);
   console.log(`  holders: ${holders.length}, supply: ${supply.toLocaleString()}`);
 
-  const owners = holders.map((h) => h.owner);
-  const ownerPrograms = await getOwnerPrograms(owners);
+  // Only resolve program-owners for holders large enough to plausibly be a venue.
+  const heldTotal = holders.reduce((a, h) => a + h.amount, 0) || 1;
+  const minAmount = (RESOLVE_THRESHOLD_PCT / 100) * heldTotal;
+  const toResolve = [...holders]
+    .sort((a, b) => b.amount - a.amount)
+    .filter((h) => h.amount >= minAmount)
+    .slice(0, MAX_RESOLVE)
+    .map((h) => h.owner);
+  const resolveSet = new Set(toResolve);
+  console.log(`  resolving program-owner for ${toResolve.length} large holder(s) (rest = self-custody)`);
+  const ownerPrograms = await getOwnerPrograms(toResolve);
 
   const bucketAmounts = new Map<VenueBucket, number>();
   const enriched = holders.map((h) => {
-    const cat = categorizeOwner(h.owner, ownerPrograms.get(h.owner) ?? null);
+    // Large holders: full categorisation via program-owner. Small holders: explicit address
+    // label if any (cheap, no RPC), else individual self-custody.
+    const cat = resolveSet.has(h.owner)
+      ? categorizeOwner(h.owner, ownerPrograms.get(h.owner) ?? null)
+      : categorizeOwner(h.owner, SYSTEM_PROGRAM);
     bucketAmounts.set(cat.bucket, (bucketAmounts.get(cat.bucket) ?? 0) + h.amount);
     return { ...h, ...cat };
   });
@@ -162,15 +186,28 @@ async function main() {
     process.exit(1);
   }
 
+  const path = join(process.cwd(), "data", "snapshot.json");
+
+  // Merge onto any existing *real* snapshot so a partial run doesn't drop previously-good
+  // variants. (A seed snapshot is discarded — never mix illustrative + real data.)
+  let merged: Record<string, OutAsset> = assets;
+  try {
+    const prev = JSON.parse(readFileSync(path, "utf8"));
+    if (prev && prev.isSeed === false && prev.assets) {
+      merged = { ...prev.assets, ...assets };
+    }
+  } catch {
+    /* no existing snapshot */
+  }
+
   const out = {
     snapshotTakenAt: new Date().toISOString(),
     isSeed: false,
     unknownThresholdPct: UNKNOWN_THRESHOLD_PCT,
-    assets,
+    assets: merged,
   };
-  const path = join(process.cwd(), "data", "snapshot.json");
   writeFileSync(path, JSON.stringify(out, null, 2) + "\n");
-  console.log(`\n✓ Wrote ${path}`);
+  console.log(`\n✓ Wrote ${path} (${Object.keys(merged).length} tokens total)`);
   if (offenders.length) console.warn(`  (forced; over-cap: ${offenders.join(", ")})`);
 }
 

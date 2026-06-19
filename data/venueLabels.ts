@@ -33,6 +33,7 @@ export const PROGRAM_BUCKETS: Record<string, { bucket: VenueBucket; label: strin
   KLend2g3cP87fffoy8q1mQqGKjrxjC8boSyAYavgmjD: { bucket: "Kamino (lending)", label: "Kamino Lend" },
   // Jupiter
   JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4: { bucket: "Jupiter", label: "Jupiter Aggregator v6" },
+  jupeiUmn818Jg1ekPURTpr4mFo29p46vygyykFJ3wZC: { bucket: "Jupiter", label: "Jupiter Lend" },
   // Meteora (treat DLMM liquidity as DEX LP -> Orca/Raydium-style; bucketed under Raydium LP family)
   LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo: { bucket: "Raydium LP", label: "Meteora DLMM" },
 };

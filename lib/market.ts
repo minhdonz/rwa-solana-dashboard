@@ -4,8 +4,6 @@
  * snapshot still records holders + venue distribution.
  */
 
-const BIRDEYE_KEY = process.env.BIRDEYE_API_KEY;
-
 export interface MarketData {
   priceUsd: number | null;
   marketCapUsd: number | null;
@@ -13,10 +11,12 @@ export interface MarketData {
 }
 
 export async function getMarketData(mint: string): Promise<MarketData> {
-  if (!BIRDEYE_KEY) return { priceUsd: null, marketCapUsd: null, volume24hUsd: null };
+  // Read lazily so dotenv can populate it before this runs.
+  const birdeyeKey = process.env.BIRDEYE_API_KEY;
+  if (!birdeyeKey) return { priceUsd: null, marketCapUsd: null, volume24hUsd: null };
   try {
     const res = await fetch(`https://public-api.birdeye.so/defi/token_overview?address=${mint}`, {
-      headers: { "X-API-KEY": BIRDEYE_KEY, "x-chain": "solana", accept: "application/json" },
+      headers: { "X-API-KEY": birdeyeKey, "x-chain": "solana", accept: "application/json" },
     });
     if (!res.ok) throw new Error(`Birdeye HTTP ${res.status}`);
     const json = await res.json();

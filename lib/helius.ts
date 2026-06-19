@@ -3,23 +3,54 @@
  * Reads HELIUS_API_KEY from the environment.
  */
 
-const HELIUS_KEY = process.env.HELIUS_API_KEY;
-
 export function heliusUrl(): string {
-  if (!HELIUS_KEY) throw new Error("HELIUS_API_KEY is not set (needed only for `npm run refresh`).");
-  return `https://mainnet.helius-rpc.com/?api-key=${HELIUS_KEY}`;
+  // Read lazily (not at module load) so dotenv has a chance to populate it first.
+  const key = process.env.HELIUS_API_KEY;
+  if (!key) throw new Error("HELIUS_API_KEY is not set (needed only for `npm run refresh`).");
+  return `https://mainnet.helius-rpc.com/?api-key=${key}`;
 }
 
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/** Gentle pacing between every RPC call to stay under free-tier rate limits. */
+const BASE_DELAY_MS = Number(process.env.HELIUS_DELAY_MS ?? 120);
+const MAX_RETRIES = 6;
+
 async function rpc<T>(method: string, params: unknown): Promise<T> {
-  const res = await fetch(heliusUrl(), {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ jsonrpc: "2.0", id: "1", method, params }),
-  });
-  if (!res.ok) throw new Error(`${method} HTTP ${res.status}: ${await res.text()}`);
-  const json = await res.json();
-  if (json.error) throw new Error(`${method} RPC error: ${JSON.stringify(json.error)}`);
-  return json.result as T;
+  let attempt = 0;
+  for (;;) {
+    await sleep(BASE_DELAY_MS);
+    const res = await fetch(heliusUrl(), {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ jsonrpc: "2.0", id: "1", method, params }),
+    });
+
+    // Rate limited (or transient 5xx) → exponential backoff and retry.
+    if (res.status === 429 || res.status >= 500) {
+      if (attempt >= MAX_RETRIES) throw new Error(`${method} HTTP ${res.status} after ${attempt} retries`);
+      const retryAfter = Number(res.headers.get("retry-after")) * 1000;
+      const backoff = retryAfter > 0 ? retryAfter : Math.min(500 * 2 ** attempt, 8000);
+      attempt += 1;
+      process.stdout.write(`    (rate limited, retry ${attempt}/${MAX_RETRIES} in ${backoff}ms)\r`);
+      await sleep(backoff);
+      continue;
+    }
+
+    if (!res.ok) throw new Error(`${method} HTTP ${res.status}: ${await res.text()}`);
+    const json = await res.json();
+    if (json.error) {
+      // Some rate-limit responses arrive as a JSON-RPC error on a 200.
+      if (json.error.code === -32429 && attempt < MAX_RETRIES) {
+        const backoff = Math.min(500 * 2 ** attempt, 8000);
+        attempt += 1;
+        await sleep(backoff);
+        continue;
+      }
+      throw new Error(`${method} RPC error: ${JSON.stringify(json.error)}`);
+    }
+    return json.result as T;
+  }
 }
 
 export interface HolderAccount {
