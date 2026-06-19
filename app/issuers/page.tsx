@@ -29,6 +29,39 @@ export default function IssuersPage() {
 
       <RightsMatrix />
 
+      <section className="border-l-2 border-brand bg-surface px-5 py-4 max-w-3xl">
+        <h3 className="font-semibold text-navy text-sm">
+          Reading &quot;buying mechanism&quot;: primary vs. secondary
+        </h3>
+        <div className="text-sm text-slate-600 mt-2 leading-relaxed space-y-2">
+          <p>
+            There are two ways to acquire a tokenized stock, and they have different hours:
+          </p>
+          <ul className="space-y-1.5 list-none">
+            <li>
+              <span className="font-medium text-slate-700">Primary (mint/redeem)</span> — transacting
+              directly with the issuer, which buys or sells the real share through its broker-dealer
+              (e.g. Alpaca for Ondo). This settles on US-equity rails, so it runs <span className="tnum">24/5</span>{" "}
+              and pauses on weekends and market holidays.
+            </li>
+            <li>
+              <span className="font-medium text-slate-700">Secondary (DEX/CEX)</span> — buying existing
+              tokens from other holders on an exchange or AMM. This runs <span className="tnum">24/7</span>{" "}
+              and needs no issuer involvement.
+            </li>
+          </ul>
+          <p>
+            The practical difference is liquidity. <span className="font-medium text-slate-700">xStocks</span>{" "}
+            and <span className="font-medium text-slate-700">Backpack</span> have deep secondary markets, so
+            you can buy any time — though when the primary market is closed, the token&apos;s price can
+            drift from the underlying since the arbitrage that holds the peg is paused.{" "}
+            <span className="font-medium text-slate-700">Ondo</span> is effectively primary-only (its tokens
+            have almost no secondary DEX liquidity), so its <span className="tnum">24/5</span> intent
+            mechanism is, in practice, the <em>only</em> way in — no weekend buying.
+          </p>
+        </div>
+      </section>
+
       <section className="grid gap-px bg-line border border-line sm:grid-cols-3">
         <Takeaway
           title="Strongest direct claim"
