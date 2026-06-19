@@ -46,7 +46,7 @@ export default function IssuerDetailPage({ params }: { params: { slug: string } 
             <div key={dim.key} className="p-4 grid sm:grid-cols-[210px_1fr] gap-x-5 gap-y-1.5">
               <div className="text-sm font-medium text-neutral">{dim.label}</div>
               <div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-stretch gap-2.5">
                   <VerdictMark verdict={cell.verdict} />
                   <span className="text-navy font-medium">{cell.value}</span>
                 </div>

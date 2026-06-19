@@ -55,10 +55,8 @@ export default function RightsMatrix() {
                       className="px-4 py-3 align-top border-l border-line cursor-pointer hover:bg-surface2"
                       onClick={() => setOpen(isOpen ? null : cellId)}
                     >
-                      <div className="flex items-start gap-2">
-                        <span className="mt-1">
-                          <VerdictMark verdict={cell.verdict} />
-                        </span>
+                      <div className="flex items-stretch gap-2.5">
+                        <VerdictMark verdict={cell.verdict} />
                         <span className="text-navy leading-snug">{cell.value}</span>
                       </div>
                       {isOpen && (

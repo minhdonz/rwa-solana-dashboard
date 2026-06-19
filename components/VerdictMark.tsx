@@ -1,29 +1,18 @@
 import { VERDICT_META, type Verdict } from "@/data/issuers";
 
 /**
- * Institutional status indicator: a small filled/hollow square in a muted semantic
- * colour. Replaces emoji glyphs. `size` in px for the square.
+ * Institutional status indicator: a thin vertical accent bar in a muted semantic colour.
+ * Stretches to the height of its flex row (use inside a `flex items-stretch` parent), so it
+ * aligns cleanly next to single- or multi-line text instead of floating like a checkbox.
  */
-export default function VerdictMark({
-  verdict,
-  size = 9,
-}: {
-  verdict: Verdict;
-  size?: number;
-}) {
+export default function VerdictMark({ verdict }: { verdict: Verdict }) {
   const meta = VERDICT_META[verdict];
   return (
     <span
       aria-label={meta.label}
       title={meta.label}
-      className="inline-block shrink-0 align-middle"
-      style={{
-        width: size,
-        height: size,
-        backgroundColor: meta.filled ? meta.color : "transparent",
-        border: `1.5px solid ${meta.color}`,
-        borderRadius: 1,
-      }}
+      className="self-stretch shrink-0 rounded-full"
+      style={{ width: 3, minHeight: "1em", backgroundColor: meta.color }}
     />
   );
 }
