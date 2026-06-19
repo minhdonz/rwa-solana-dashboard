@@ -30,6 +30,7 @@ export const DIMENSIONS = [
   { key: "backing", label: "Backing & custody" },
   { key: "voting", label: "Shareholder & voting rights" },
   { key: "dividends", label: "Dividend treatment" },
+  { key: "buying", label: "Buying mechanism & hours" },
   { key: "redemption", label: "Redemption right" },
   { key: "transferability", label: "Transferability & KYC" },
   { key: "defi", label: "DeFi composability" },
@@ -64,6 +65,12 @@ export const ISSUERS: Issuer[] = [
     tickerStyle: "Suffix 'x' (e.g. AAPLx, SPCXx, NVDAx)",
     website: "https://xstocks.fi",
     rights: {
+      buying: {
+        value: "24/7 secondary (DEX/CEX)",
+        verdict: "good",
+        note: "Retail buys on the open secondary market 24/7 — DEXs (Raydium, Jupiter, Kamino) or CEXs (Kraken, Bybit) — with no market-hours gate. Primary mint/redeem via the issuer runs 24/5 (US market hours); while it's closed the price can drift from the underlying since arbitrage pauses, but you can still transact any time.",
+        source: "https://docs.xstocks.fi/docs",
+      },
       legalWrapper: {
         value: "Bankruptcy-remote SPV",
         verdict: "neutral",
@@ -130,6 +137,12 @@ export const ISSUERS: Issuer[] = [
     tickerStyle: "Plain ticker (e.g. SPCX)",
     website: "https://backpack.exchange",
     rights: {
+      buying: {
+        value: "24/7 on-chain secondary",
+        verdict: "good",
+        note: "SPCX trades 24/7 on Solana via Sunrise-routed liquidity — Nasdaq hours don't apply, so you can buy on weekends and after hours. Each token is backed 1:1 by a custodied share.",
+        source: "https://solanacompass.com/news/backpack-and-sunrise-launch-spcx-a-tokenized-spacex-stock-on-solana-the-same-day-it-lists-on-nasdaq",
+      },
       legalWrapper: {
         value: "US broker-dealer direct",
         verdict: "good",
@@ -196,6 +209,12 @@ export const ISSUERS: Issuer[] = [
     tickerStyle: "Ticker (Ondo Global Markets)",
     website: "https://ondo.finance",
     rights: {
+      buying: {
+        value: "Intent mint/redeem · 24/5 — no weekends",
+        verdict: "bad",
+        note: "Acquired by intent: you submit a mint request and deposit funds, Alpaca (broker-dealer) buys the underlying share, and the token is minted to your wallet. Mint/redeem runs 24/5 aligned with US market hours — you cannot buy when markets are closed (weekends/holidays). Tokens transfer 24/7, but there is little secondary DEX liquidity to buy from off-hours.",
+        source: "https://docs.ondo.finance/ondo-global-markets/overview",
+      },
       legalWrapper: {
         value: "Tokenized security (issuer)",
         verdict: "neutral",
@@ -262,6 +281,12 @@ export const ISSUERS: Issuer[] = [
     tickerStyle: "Plain name (e.g. SPACEX)",
     website: "https://pre-stocks.com",
     rights: {
+      buying: {
+        value: "Secondary DEX · 24/7 (thin)",
+        verdict: "partial",
+        note: "Trades on Solana DEXs around the clock, but liquidity is thin — larger buys move the price meaningfully. No broad retail primary-mint channel.",
+        source: "https://coingape.com/tokenized-spacex-stocks-top-solana-dex-trading-after-record-ipo/",
+      },
       legalWrapper: {
         value: "Issuer-structured",
         verdict: "neutral",
@@ -328,6 +353,12 @@ export const ISSUERS: Issuer[] = [
     tickerStyle: "xStocks tickers (suffix 'x')",
     website: "https://www.kraken.com/features/xstocks",
     rights: {
+      buying: {
+        value: "CEX 24/7 (+ on-chain)",
+        verdict: "good",
+        note: "Buy/sell on Kraken 24/7, and withdraw on-chain to trade the xStocks token in Solana DeFi. The underlying issuer mint/redeem is 24/5, but the secondary market is always open.",
+        source: "https://www.kraken.com/xstocks",
+      },
       legalWrapper: {
         value: "Backed SPV (distributed)",
         verdict: "neutral",
@@ -394,6 +425,12 @@ export const ISSUERS: Issuer[] = [
     tickerStyle: "Ticker (EU listing)",
     website: "https://robinhood.com",
     rights: {
+      buying: {
+        value: "In-app brokerage hours",
+        verdict: "bad",
+        note: "Bought within the Robinhood app under its brokerage model (extended hours, but not 24/7 permissionless). A closed product with no open on-chain secondary market to buy from.",
+        source: "https://eco.com/support/en/articles/15083160-robinhood-tokenized-stocks-what-s-live-and-how-it-works",
+      },
       legalWrapper: {
         value: "EU-regulated brokerage",
         verdict: "good",
