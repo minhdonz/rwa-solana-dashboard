@@ -51,18 +51,19 @@ export const PROGRAM_BUCKETS: Record<string, { bucket: VenueBucket; label: strin
  * adding — verify their Solana hot-wallet addresses on Solscan/Arkham before enabling.
  */
 export const ADDRESS_LABELS: Record<string, { bucket: VenueBucket; label: string }> = {
-  // Verified via Solscan account labels:
+  // Verified via Solscan account labels (label shown on the linked account page):
   GJRs4FwHtemZ5ZE9x3FNvJ8TMwitKTh21yxdRPqn7npE: { bucket: "CEX wallet", label: "Coinbase" }, // solscan.io/account/GJRs4FwHtemZ5ZE9x3FNvJ8TMwitKTh21yxdRPqn7npE (Coinbase Hot Wallet 2)
   "53unSgGWqEWANcPYRF35B2Bgf8BkszUtcccKiXwGGLyr": { bucket: "CEX wallet", label: "Binance.US" }, // solscan.io/account/53unSgGWqEWANcPYRF35B2Bgf8BkszUtcccKiXwGGLyr
-  "9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM": { bucket: "CEX wallet", label: "Binance" }, // solscan.io/account/9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM (Binance hot wallet)
+  "9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM": { bucket: "CEX wallet", label: "Binance" }, // solscan.io/account/9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM
+  AC5RDfQFmDS1deWZos921JfqscXdByf8BKHs5ACWjtW2: { bucket: "CEX wallet", label: "Bybit" }, // solscan.io/account/AC5RDfQFmDS1deWZos921JfqscXdByf8BKHs5ACWjtW2 (Bybit Hot Wallet)
+  u6PJ8DtQuPFnfmwHbGFULQ4u4EgjDiyYKjVEsynXq2w: { bucket: "CEX wallet", label: "Gate" }, // solscan.io/account/u6PJ8DtQuPFnfmwHbGFULQ4u4EgjDiyYKjVEsynXq2w (Gate.io)
+  "7TWnq4WeYcwQWBCwKeEX2Q9xqVtthPGkB7adNvueuVuh": { bucket: "CEX wallet", label: "Bitget" }, // solscan.io/account/7TWnq4WeYcwQWBCwKeEX2Q9xqVtthPGkB7adNvueuVuh (Bitget cold wallet)
 
-  // TODO — verify on Solscan/Arkham, then uncomment. These are the venues that custody
-  // tokenized stocks, so they have the highest impact on the CEX bucket here:
-  // "<kraken_sol_hot_wallet>":  { bucket: "CEX wallet", label: "Kraken" },
-  // "<bybit_sol_hot_wallet>":   { bucket: "CEX wallet", label: "Bybit" },
-  // "<backpack_sol_hot_wallet>":{ bucket: "CEX wallet", label: "Backpack" },
-  // "<gate_sol_hot_wallet>":    { bucket: "CEX wallet", label: "Gate" },
-  // "<bitget_sol_hot_wallet>":  { bucket: "CEX wallet", label: "Bitget" },
+  // TODO — Kraken and Backpack matter most here (Kraken resells xStocks; Backpack issues SPCX)
+  // but no Solscan-labeled Solana hot wallet was confirmable. Verify on Solscan/Arkham and add.
+  // The refresh script's large-unlabeled-holder flag will point you at the likely addresses.
+  // "<kraken_sol_hot_wallet>":   { bucket: "CEX wallet", label: "Kraken" },
+  // "<backpack_sol_hot_wallet>": { bucket: "CEX wallet", label: "Backpack" },
 };
 
 /** Programs that mean "an ordinary self-custody wallet holds this". */
