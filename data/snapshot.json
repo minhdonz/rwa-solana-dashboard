@@ -1,0 +1,1999 @@
+{
+  "snapshotTakenAt": "2026-06-19T07:33:51.291Z",
+  "isSeed": true,
+  "unknownThresholdPct": 15,
+  "assets": {
+    "SPCX": {
+      "symbol": "SPCX",
+      "mint": null,
+      "holders": 10200,
+      "priceUsd": 138.7,
+      "marketCapUsd": 28162064,
+      "volume24hUsd": 5379925,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 46.4,
+          "amount": 94186
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 9.7,
+          "amount": 19790
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 6.7,
+          "amount": 13538
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 12.5,
+          "amount": 25359
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 0.9,
+          "amount": 1726
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 19.1,
+          "amount": 38732
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 4.8,
+          "amount": 9711
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "HkNyqLrnPQapquMC35t7KvMUx9Ajv7ixeQHARyA3UjyY",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 40501,
+          "pct": 27.7
+        },
+        {
+          "owner": "1PqhS55uZJR6tebevB7F6Vi6bAW5vz8EXXdammeQjCZ4",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 12542,
+          "pct": 6.1
+        },
+        {
+          "owner": "i61U4yzKs74B9HgUEZ31HQQ5JcvdQkUCpzumrrxh6ugH",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 9243,
+          "pct": 4.6
+        },
+        {
+          "owner": "ubdwdTznzKPd1iN8yYbRbXSHtfkH9zoxGJ8zxzxtNzPL",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 15921,
+          "pct": 5.1
+        },
+        {
+          "owner": "QyQ8Ua5y5kBLVq3u3rYMdBacc5LnwPteKPZiAHyfFjwM",
+          "label": "CEX wallet #5",
+          "bucket": "CEX wallet",
+          "amount": 12053,
+          "pct": 10.2
+        }
+      ],
+      "unknownPct": 4.8
+    },
+    "SPCXx": {
+      "symbol": "SPCXx",
+      "mint": null,
+      "holders": 5400,
+      "priceUsd": 243.8,
+      "marketCapUsd": 42322461,
+      "volume24hUsd": 1874326,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 36.4,
+          "amount": 63168
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 20.5,
+          "amount": 35519
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 6,
+          "amount": 10376
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 19.1,
+          "amount": 33144
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 3,
+          "amount": 5231
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 7.3,
+          "amount": 12734
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 7.7,
+          "amount": 13422
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "e7q8gU26ggPq92p31LjaFPXSFongbPctc1rHsVuXGCps",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 28300,
+          "pct": 14.2
+        },
+        {
+          "owner": "uQmwfHNLqmK7b49WKK1dssLz8gXzzNSYWi7qzMSVHUv6",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 12672,
+          "pct": 7.8
+        },
+        {
+          "owner": "vATDHpUQs3wypPe9yV22gbqoJYFAd46v9QyPw6JiUA1U",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 6978,
+          "pct": 3.2
+        },
+        {
+          "owner": "ffzERug4remCj8pgmnr5QShTc6UjYQhcNJNJh3vrVUUG",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 22867,
+          "pct": 10.4
+        },
+        {
+          "owner": "kUq7qeaMfZySL9ujqxWXdVc7xyDh9A8QKMwb7dtLrQ8x",
+          "label": "Jupiter #5",
+          "bucket": "Jupiter",
+          "amount": 3123,
+          "pct": 1.2
+        }
+      ],
+      "unknownPct": 7.7
+    },
+    "SPACEX": {
+      "symbol": "SPACEX",
+      "mint": null,
+      "holders": 1300,
+      "priceUsd": 434.2,
+      "marketCapUsd": 11557536,
+      "volume24hUsd": 871279,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 39.3,
+          "amount": 10466
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 10.1,
+          "amount": 2683
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 2.6,
+          "amount": 684
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 5.6,
+          "amount": 1480
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 2.1,
+          "amount": 552
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 30.1,
+          "amount": 8017
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 10.3,
+          "amount": 2735
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "Zss4TqCBKhhdMpm2k4rnFB5mCQCVsyYoYhHenosJFbqK",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 6066,
+          "pct": 14.8
+        },
+        {
+          "owner": "R7q3iBhE8hAUwKMViPbPBx6NVnx2bvopqyoXDHubSGzg",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 1212,
+          "pct": 7
+        },
+        {
+          "owner": "2BHEjEfV7XnvQYKhbJ3HLmrc6j7gMR7qFJC9cf3aYbvZ",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 358,
+          "pct": 1.3
+        },
+        {
+          "owner": "3RiqxWaAJdBcUeRPAnk8u4HxU6a2T1sECGKu5CbSoKNA",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 585,
+          "pct": 1.9
+        },
+        {
+          "owner": "wuUsL5rU2QuusPyJm6qMUtxx6EVtBR9jTUujUYv4AYVp",
+          "label": "Jupiter #5",
+          "bucket": "Jupiter",
+          "amount": 227,
+          "pct": 1.5
+        }
+      ],
+      "unknownPct": 10.3
+    },
+    "NVDAx": {
+      "symbol": "NVDAx",
+      "mint": null,
+      "holders": 5372,
+      "priceUsd": 130.4,
+      "marketCapUsd": 8357727,
+      "volume24hUsd": 1148154,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 40.8,
+          "amount": 26165
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 18.8,
+          "amount": 12041
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 9.2,
+          "amount": 5869
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 10.5,
+          "amount": 6756
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 3.3,
+          "amount": 2139
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 5.4,
+          "amount": 3443
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 12,
+          "amount": 7680
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "eAUjD8cocDxk3uz3HyrtF8AKSXjfTJ8uZsB8sJiJGFJy",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 16514,
+          "pct": 21.9
+        },
+        {
+          "owner": "MGJPSuhw3Ymt85rNVue4KADgxCKTwkwjSXt65jdPRDiR",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 7594,
+          "pct": 6.6
+        },
+        {
+          "owner": "zYHtAgvW6GUJRYoUfG1L6tZT16QPHENcUdjj7UL1mRPN",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 3284,
+          "pct": 5.7
+        },
+        {
+          "owner": "CzA83rathKpkBBy5Q39LWnJNTxpAwoMEsUVE9tFNeC2N",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 3474,
+          "pct": 4.8
+        },
+        {
+          "owner": "WfdhDbgWzffWz8xQdUwCZJCS9WPnSDnyo8sZYdzwLsdu",
+          "label": "Jupiter #5",
+          "bucket": "Jupiter",
+          "amount": 1132,
+          "pct": 2.1
+        }
+      ],
+      "unknownPct": 12
+    },
+    "NVDA.o": {
+      "symbol": "NVDA.o",
+      "mint": null,
+      "holders": 5881,
+      "priceUsd": 201.4,
+      "marketCapUsd": 26962224,
+      "volume24hUsd": 5003002,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 40.3,
+          "amount": 53990
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 10.9,
+          "amount": 14554
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 5.6,
+          "amount": 7434
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 9.6,
+          "amount": 12915
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 2.3,
+          "amount": 3119
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 22.2,
+          "amount": 29660
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 9.1,
+          "amount": 12202
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "YpyRuKY6HTCtpYgBb1kBhvAzveTnChUufeqHousR2JVH",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 28603,
+          "pct": 26
+        },
+        {
+          "owner": "akaMEdPmEmACGUhPyC96oeBVn4WY3dpXqG2vyoXzqcPk",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 9495,
+          "pct": 7.1
+        },
+        {
+          "owner": "49jpLNxLonJ4SR2Zn9nTuMR51dEV3pZkygHSovK5KjA1",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 2645,
+          "pct": 3.1
+        },
+        {
+          "owner": "mfsQbXCibgzru7XqumLq6F7t1qVa1zKrPhHPCByVqJqg",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 5976,
+          "pct": 4.7
+        },
+        {
+          "owner": "Kwq7BXobZi3REK6N6uMFa4hFe5dD4otpTRoArn8csLD6",
+          "label": "Jupiter #5",
+          "bucket": "Jupiter",
+          "amount": 1224,
+          "pct": 0.9
+        }
+      ],
+      "unknownPct": 9.1
+    },
+    "dNVDA": {
+      "symbol": "dNVDA",
+      "mint": null,
+      "holders": 1042,
+      "priceUsd": 162.5,
+      "marketCapUsd": 7547800,
+      "volume24hUsd": 1367492,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 41.7,
+          "amount": 19355
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 8.9,
+          "amount": 4119
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 4.5,
+          "amount": 2085
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 5.2,
+          "amount": 2424
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 1.6,
+          "amount": 730
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 29.6,
+          "amount": 13737
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 8.6,
+          "amount": 3999
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "5smH7wL4HwMcFu1fTJDXHAtbfbKE4mxrhpB89TnXvdpw",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 7716,
+          "pct": 15.2
+        },
+        {
+          "owner": "hGQ8FHToumTU2iTRYULpLLt2sziZ4D5VuxvPZTpgqz6H",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 2690,
+          "pct": 3.2
+        },
+        {
+          "owner": "eMq9n2EtCN4oRmGJ5T6wPVfNaGN3NJJeWCSqjyFcCCqD",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 1374,
+          "pct": 1.7
+        },
+        {
+          "owner": "VwsjdMcsJettva5iswVFpQw6dTkXWGErCow6ArA9D1JV",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 1684,
+          "pct": 2.1
+        },
+        {
+          "owner": "rNVgNqHpLwdjyVgsoqhBDhvJUnWVcJtfWx3e1j4hBztY",
+          "label": "Jupiter #5",
+          "bucket": "Jupiter",
+          "amount": 419,
+          "pct": 0.6
+        }
+      ],
+      "unknownPct": 8.6
+    },
+    "TSLAx": {
+      "symbol": "TSLAx",
+      "mint": null,
+      "holders": 8712,
+      "priceUsd": 233.9,
+      "marketCapUsd": 63787805,
+      "volume24hUsd": 11563562,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 41.2,
+          "amount": 112401
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 19.4,
+          "amount": 52925
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 5.9,
+          "amount": 16032
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 14.7,
+          "amount": 40035
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 4.1,
+          "amount": 11173
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 7.1,
+          "amount": 19459
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 7.6,
+          "amount": 20687
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "1vW3jLmaw1xP9TjqBcgkdzgANj9fyJU5SBLLEi6bpFwb",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 73322,
+          "pct": 19.3
+        },
+        {
+          "owner": "rZ6DBL74xxDzA78duyrN2BzbMoybDAYW6ZZx5mW12MDt",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 34263,
+          "pct": 13
+        },
+        {
+          "owner": "XmTX3YS366f72MTXMVzk3YNMC4eFvWxMRmbtDs2DnGeA",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 5930,
+          "pct": 4.1
+        },
+        {
+          "owner": "F8rEDe4T5dPfsFeqZYoAX9WyPtVfoBj5aPwNE566A3D7",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 24822,
+          "pct": 7.4
+        },
+        {
+          "owner": "afjQJfLpR5btyL32jQt2gzUGgCUTCjuBDwP7g1R1LRYD",
+          "label": "Jupiter #5",
+          "bucket": "Jupiter",
+          "amount": 3896,
+          "pct": 1.7
+        }
+      ],
+      "unknownPct": 7.6
+    },
+    "TSLA.o": {
+      "symbol": "TSLA.o",
+      "mint": null,
+      "holders": 5880,
+      "priceUsd": 185.5,
+      "marketCapUsd": 14841299,
+      "volume24hUsd": 2929265,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 46.6,
+          "amount": 37309
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 6.9,
+          "amount": 5498
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 3.2,
+          "amount": 2560
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 11.8,
+          "amount": 9472
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 2.7,
+          "amount": 2184
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 18.5,
+          "amount": 14763
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 10.3,
+          "amount": 8220
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "4FPahVZfcPAcbwzfsRX5VfrzztFzPHv9P9jJH3BzGkJo",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 18626,
+          "pct": 31.3
+        },
+        {
+          "owner": "4zj476LaPsZDvpPXaj7hExsFvYjFECh9nYjhA1tJq936",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 3160,
+          "pct": 3.3
+        },
+        {
+          "owner": "vo2ZtptGjvQ7CWahRuh5osDXEnAEskmFrPdsSsJVpdQz",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 1360,
+          "pct": 1.7
+        },
+        {
+          "owner": "PS8iE7icMpV3mJB9P7F85ot4xMUXMwCrqYr3HuZpNRqu",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 4523,
+          "pct": 5.3
+        },
+        {
+          "owner": "isfkhZAiqTcFyHjxytEGxZcGCfPBFMH7icH5mKsry8Ja",
+          "label": "Jupiter #5",
+          "bucket": "Jupiter",
+          "amount": 1376,
+          "pct": 1.3
+        }
+      ],
+      "unknownPct": 10.3
+    },
+    "dTSLA": {
+      "symbol": "dTSLA",
+      "mint": null,
+      "holders": 1022,
+      "priceUsd": 111.3,
+      "marketCapUsd": 2831361,
+      "volume24hUsd": 558820,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 45.8,
+          "amount": 11639
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 10.2,
+          "amount": 2586
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 3.5,
+          "amount": 896
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 10.4,
+          "amount": 2649
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 2.3,
+          "amount": 575
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 17.2,
+          "amount": 4371
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 10.7,
+          "amount": 2723
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "LZfHhXRBCktPGfjCMnx91JoigsxQi1nzZM4LJ4tZDoSq",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 4689,
+          "pct": 19.8
+        },
+        {
+          "owner": "4C9NewPRthQpxZFpeykzKGPpgWi3UfVqvfN6UF4wLXHZ",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 1740,
+          "pct": 4.2
+        },
+        {
+          "owner": "pQzyKvFXyDuAzGmpPwJDfBHGMDFPbJ7ZR4PE4DmZKayT",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 533,
+          "pct": 2.2
+        },
+        {
+          "owner": "RaurHEQu5ZVRmjkKd5ETEmHDBqQxGuerH64hAdbkZffe",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 1413,
+          "pct": 6.5
+        },
+        {
+          "owner": "L4ZzayJqLY8tc1N7Pqkv2RBz2WrNxkrmHqT1SsShBneK",
+          "label": "Jupiter #5",
+          "bucket": "Jupiter",
+          "amount": 310,
+          "pct": 0.9
+        }
+      ],
+      "unknownPct": 10.7
+    },
+    "AAPLx": {
+      "symbol": "AAPLx",
+      "mint": null,
+      "holders": 3521,
+      "priceUsd": 72.3,
+      "marketCapUsd": 4339446,
+      "volume24hUsd": 648059,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 50.1,
+          "amount": 30085
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 13,
+          "amount": 7795
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 4.4,
+          "amount": 2669
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 13.6,
+          "amount": 8158
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 2.4,
+          "amount": 1470
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 9,
+          "amount": 5423
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 7.4,
+          "amount": 4419
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "ZeydN6MmphXDvZPBWFWrHEFMiwy7kz4XxP4Wt8v3fZNY",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 19647,
+          "pct": 33.1
+        },
+        {
+          "owner": "sCLqNqpYdJVE6An6JdhjbDxo3BMZgTTXetSyBnawvkgX",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 3202,
+          "pct": 8.1
+        },
+        {
+          "owner": "zrDtt6ViX5ZStxyQSFoJdsciMRsVUZipQES8ycdH2KTS",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 1758,
+          "pct": 2.2
+        },
+        {
+          "owner": "BzvZyY7P156Fzsov963nLnNqxDns1ui2pczrTv7GGXq8",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 3285,
+          "pct": 6
+        },
+        {
+          "owner": "SrVH6BdbfKrwm6NTowWHV9jRYW65ntAuPVvvXWxddB7D",
+          "label": "Jupiter #5",
+          "bucket": "Jupiter",
+          "amount": 470,
+          "pct": 0.7
+        }
+      ],
+      "unknownPct": 7.4
+    },
+    "AAPL.o": {
+      "symbol": "AAPL.o",
+      "mint": null,
+      "holders": 6080,
+      "priceUsd": 421.8,
+      "marketCapUsd": 44568653,
+      "volume24hUsd": 7662246,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 39.7,
+          "amount": 41983
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 7.1,
+          "amount": 7484
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 2.2,
+          "amount": 2339
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 5,
+          "amount": 5271
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 1.7,
+          "amount": 1762
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 32.2,
+          "amount": 33986
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 12.2,
+          "amount": 12839
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "FLj1ZMXRjkG32p12diGRuZCPB53XBVY3zxp4Gea2NriQ",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 27898,
+          "pct": 24.5
+        },
+        {
+          "owner": "y76F8tK7hD4dpiVbwzvjn4vVNg6NMbgKgibRwbJAr6p5",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 3402,
+          "pct": 3
+        },
+        {
+          "owner": "vxZpoakbthxPdtEK9pJous1J6RAwg4R6hjeioZpM2TaB",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 739,
+          "pct": 1.5
+        },
+        {
+          "owner": "2SnHZSpDjirKkABDXaBncMCtBDA8MeyjaTpNV7mBoipZ",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 3219,
+          "pct": 2.5
+        },
+        {
+          "owner": "48fd93xtKifkLE35u2qyqqVUTunTNe4p1yfUeNbBK5Lk",
+          "label": "Jupiter #5",
+          "bucket": "Jupiter",
+          "amount": 1079,
+          "pct": 1.1
+        }
+      ],
+      "unknownPct": 12.2
+    },
+    "dAAPL": {
+      "symbol": "dAAPL",
+      "mint": null,
+      "holders": 3628,
+      "priceUsd": 293.2,
+      "marketCapUsd": 34005629,
+      "volume24hUsd": 1405803,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 40,
+          "amount": 46447
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 9.8,
+          "amount": 11408
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 5.1,
+          "amount": 5909
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 3.3,
+          "amount": 3779
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 0.7,
+          "amount": 766
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 28.5,
+          "amount": 33095
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 12.6,
+          "amount": 14578
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "M7hDs1iJZPr1adoFPEULRTP5qZADjVfQrE5z7uDnKmhZ",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 27918,
+          "pct": 19.5
+        },
+        {
+          "owner": "Ff9SqVr7r3nyHv7K3Bo6EPptbhnnNKKW7FjtD5F5GrWG",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 7436,
+          "pct": 3.6
+        },
+        {
+          "owner": "mErUezGcEZfuVDjg4Wa3SGkdd7LSy5MjnJv7CWqPSGrn",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 2046,
+          "pct": 2.9
+        },
+        {
+          "owner": "XwRfqWuQ9itN2ZVUbMQNmtRd97cArSW5dbqnuL3LQNLN",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 2568,
+          "pct": 1.7
+        },
+        {
+          "owner": "2hmveyGNZiUS1dTa4CJXM1DufFW3jPhUMxLSxu1VudJA",
+          "label": "CEX wallet #5",
+          "bucket": "CEX wallet",
+          "amount": 22826,
+          "pct": 8.6
+        }
+      ],
+      "unknownPct": 12.6
+    },
+    "MSTRx": {
+      "symbol": "MSTRx",
+      "mint": null,
+      "holders": 2988,
+      "priceUsd": 276.5,
+      "marketCapUsd": 21196767,
+      "volume24hUsd": 3134861,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 36.3,
+          "amount": 27801
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 14.3,
+          "amount": 10942
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 5.4,
+          "amount": 4138
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 19.2,
+          "amount": 14700
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 3.6,
+          "amount": 2766
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 8.3,
+          "amount": 6384
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 13,
+          "amount": 9929
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "msh6db4SFiAQmKhefD5GwRWdyf5C81f71RCkQRXVWL43",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 14169,
+          "pct": 12.8
+        },
+        {
+          "owner": "zgmYBMj9rcCecffMXyVVTgMxs8S8RFc7jvNWVJtHogjD",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 6812,
+          "pct": 7.3
+        },
+        {
+          "owner": "8t3iE3PLKPs9yGzDvQG8vis7xS5jQvRMWoKZsav5nuT9",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 1533,
+          "pct": 3.3
+        },
+        {
+          "owner": "eZTtNKVXDzPQ7NEE7NQipzyndMjxJkZ7Uwt1mMuZbmYj",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 7709,
+          "pct": 10.2
+        },
+        {
+          "owner": "dVF57gc3pZC2sFdH9jTsaucf23uuAbTN2uxKksXv4hJE",
+          "label": "Jupiter #5",
+          "bucket": "Jupiter",
+          "amount": 1067,
+          "pct": 1.6
+        }
+      ],
+      "unknownPct": 13
+    },
+    "MSTR.o": {
+      "symbol": "MSTR.o",
+      "mint": null,
+      "holders": 2478,
+      "priceUsd": 210.7,
+      "marketCapUsd": 24411281,
+      "volume24hUsd": 1409835,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 45.1,
+          "amount": 52204
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 9.3,
+          "amount": 10821
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 4.5,
+          "amount": 5164
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 9.6,
+          "amount": 11144
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 0.9,
+          "amount": 996
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 25.6,
+          "amount": 29680
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 5,
+          "amount": 5849
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "vF94DCfa3C61PvjMrT8me8k8zRMJWmYQaqLJ1uM2V6pU",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 23263,
+          "pct": 19.2
+        },
+        {
+          "owner": "uRqnvsKEbM6naK17yFByfRMLUaZFVkWMu1H3S9sj6CUn",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 6253,
+          "pct": 4.2
+        },
+        {
+          "owner": "9VT97oVXrjWefhTAWvyJKeQFhf6DWvRjFGsJGn2PfXPH",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 1861,
+          "pct": 1.7
+        },
+        {
+          "owner": "ceKnfhsBrun2aJBRLdoWUbcVSMhSce2ykK8NLeWZkkGu",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 5233,
+          "pct": 5.9
+        },
+        {
+          "owner": "yupAzTDVU61SazVYmzYg47ttogdVPEvJiFyGfKdYqfef",
+          "label": "CEX wallet #5",
+          "bucket": "CEX wallet",
+          "amount": 19245,
+          "pct": 8.3
+        }
+      ],
+      "unknownPct": 5
+    },
+    "COINx": {
+      "symbol": "COINx",
+      "mint": null,
+      "holders": 2932,
+      "priceUsd": 277.4,
+      "marketCapUsd": 19220491,
+      "volume24hUsd": 3170008,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 34.8,
+          "amount": 24142
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 17.8,
+          "amount": 12317
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 11.8,
+          "amount": 8163
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 19.8,
+          "amount": 13710
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 3.5,
+          "amount": 2458
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 7.6,
+          "amount": 5289
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 4.6,
+          "amount": 3209
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "6L1Yt19FAFzE7sshf3uZKgQcgNLiyFnsAmPA1VRScBX4",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 11851,
+          "pct": 15.1
+        },
+        {
+          "owner": "NANQqt4HKTZyLnCMewF4FzniT35UHQM1vhXn6LH85xW3",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 4498,
+          "pct": 8.6
+        },
+        {
+          "owner": "exwiAJDoNPszPC37gvdibyVXvrmcX3URYL2pu6nxQFns",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 5461,
+          "pct": 4.9
+        },
+        {
+          "owner": "CVcV4ALkNBSyfd7U1LzpFdKu4JMqLjPLBGEN31mWvP5p",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 7564,
+          "pct": 11.7
+        },
+        {
+          "owner": "wARtSSJ1SMNwh7ENf6jTBp2xZSHda7dVvvB2rMVQBwjf",
+          "label": "Jupiter #5",
+          "bucket": "Jupiter",
+          "amount": 1569,
+          "pct": 2.3
+        }
+      ],
+      "unknownPct": 4.6
+    },
+    "COIN.o": {
+      "symbol": "COIN.o",
+      "mint": null,
+      "holders": 3220,
+      "priceUsd": 343.5,
+      "marketCapUsd": 14779775,
+      "volume24hUsd": 1899210,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 49.3,
+          "amount": 21219
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 11.5,
+          "amount": 4946
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 4.3,
+          "amount": 1852
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 6,
+          "amount": 2579
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 1.9,
+          "amount": 831
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 18.6,
+          "amount": 7988
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 8.4,
+          "amount": 3611
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "tbR4sCsEta9hYPn3xfnGFKBcdFy8ZvvzZGkd3bxUzwQx",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 13791,
+          "pct": 16.2
+        },
+        {
+          "owner": "yB9cDJy2VHuAuTox9kMKCnhe3vEimZKLRNMcx51b6wAR",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 3019,
+          "pct": 5.1
+        },
+        {
+          "owner": "z6FQ4GDzQy7GKUCgw8E7b3vYCSzvefzJjCmvgLvCHUHs",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 1210,
+          "pct": 2.9
+        },
+        {
+          "owner": "DfQPdAHh36Y3sYa9Ngk6m6A3RsYCe9HS2utKLbG6Q6yF",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 1791,
+          "pct": 2.4
+        },
+        {
+          "owner": "4jWNj3EeKLJBjijhsrrvQAk7sdk1VwXkWi9Q4dQFjvnh",
+          "label": "Jupiter #5",
+          "bucket": "Jupiter",
+          "amount": 303,
+          "pct": 1.3
+        }
+      ],
+      "unknownPct": 8.4
+    },
+    "AMZNx": {
+      "symbol": "AMZNx",
+      "mint": null,
+      "holders": 5411,
+      "priceUsd": 152.9,
+      "marketCapUsd": 29692110,
+      "volume24hUsd": 4032926,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 34.9,
+          "amount": 67796
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 23.8,
+          "amount": 46255
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 8,
+          "amount": 15465
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 13.8,
+          "amount": 26771
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 4.6,
+          "amount": 8963
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 5.6,
+          "amount": 10838
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 9.3,
+          "amount": 18105
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "TbK8ojMtzjBFbxWAX6AtsZcVj9pmXJv8oeaqogrrbktB",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 32257,
+          "pct": 19
+        },
+        {
+          "owner": "L994byYbLenhbDtLbsJSmc7xWiMt6MoxzRu8cfafiPq2",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 27623,
+          "pct": 8.7
+        },
+        {
+          "owner": "nArKk5gg6MEp4K1WxFjLAHQNZ8FU1VqXGpjZf3mKEmug",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 9042,
+          "pct": 3.1
+        },
+        {
+          "owner": "hNvg2VC4JUJMBJSBP4K4JDEpu2ueLmYVoj7hrHURLNk6",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 14960,
+          "pct": 6.9
+        },
+        {
+          "owner": "2UNLzmRCfHRHJh14YXVkcmGsoy1xT9J5vVq89RtPjzwT",
+          "label": "Jupiter #5",
+          "bucket": "Jupiter",
+          "amount": 4996,
+          "pct": 2.9
+        }
+      ],
+      "unknownPct": 9.3
+    },
+    "AMZN.o": {
+      "symbol": "AMZN.o",
+      "mint": null,
+      "holders": 3456,
+      "priceUsd": 295,
+      "marketCapUsd": 23018850,
+      "volume24hUsd": 2007156,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 47.8,
+          "amount": 37263
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 10.2,
+          "amount": 7938
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 3.1,
+          "amount": 2456
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 5,
+          "amount": 3908
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 2.4,
+          "amount": 1884
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 17.2,
+          "amount": 13458
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 14.3,
+          "amount": 11123
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "7erJF9uA2r3d6WcxfDrk1ZtKjDELHXVQhZqjS3daP3n9",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 21185,
+          "pct": 25.8
+        },
+        {
+          "owner": "D9tKSG9GfL7sjKTiCgzqWwoZrRCLb3teDf16jj4Px27G",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 4139,
+          "pct": 3.1
+        },
+        {
+          "owner": "U1ZaejKFP7RYxMpxv7N5Hix66UYxQcPQqT2YiwGCLVy7",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 1236,
+          "pct": 2
+        },
+        {
+          "owner": "izKHt8yimhEFzpZZNzJk5L5bcoWnFT5t6kVYzrV5GsRb",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 1284,
+          "pct": 3.3
+        },
+        {
+          "owner": "vtQwES2chWReyZDZt5J42QtFC7sc9jmogwfQfq4hFuSb",
+          "label": "Jupiter #5",
+          "bucket": "Jupiter",
+          "amount": 843,
+          "pct": 1.5
+        }
+      ],
+      "unknownPct": 14.3
+    },
+    "MSFTx": {
+      "symbol": "MSFTx",
+      "mint": null,
+      "holders": 6750,
+      "priceUsd": 397,
+      "marketCapUsd": 51520675,
+      "volume24hUsd": 6814428,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 38.5,
+          "amount": 49988
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 20.7,
+          "amount": 26821
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 7.9,
+          "amount": 10287
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 14,
+          "amount": 18226
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 4.2,
+          "amount": 5406
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 7.8,
+          "amount": 10161
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 6.8,
+          "amount": 8886
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "WPaWZyocGG7ToAM1M4yNfsLUJ4WFP3JvKDm4H4nhSroX",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 26776,
+          "pct": 18.3
+        },
+        {
+          "owner": "EYvVTfWufCHdHJGCrwR2gjsoZ3Eynhrrr5tjfXp2w8Xr",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 9417,
+          "pct": 13.1
+        },
+        {
+          "owner": "G3dRtcamAaSVnN6173momo6XTXTT58wrwVDpPiBcRmrx",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 4730,
+          "pct": 4.6
+        },
+        {
+          "owner": "nkuLk6T8h4ry9VKH8Ar4ih6CTzQSYDrQHoRaAkyT1Le8",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 9226,
+          "pct": 6
+        },
+        {
+          "owner": "UHxmHHPAVAFCQRHZ6fW5x6TFXc8seY4DrkimZVj3YdSc",
+          "label": "Jupiter #5",
+          "bucket": "Jupiter",
+          "amount": 3083,
+          "pct": 2.8
+        }
+      ],
+      "unknownPct": 6.8
+    },
+    "MSFT.o": {
+      "symbol": "MSFT.o",
+      "mint": null,
+      "holders": 5993,
+      "priceUsd": 359.3,
+      "marketCapUsd": 74936327,
+      "volume24hUsd": 3784760,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 45.2,
+          "amount": 94299
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 9.9,
+          "amount": 20660
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 3.9,
+          "amount": 8095
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 6.5,
+          "amount": 13498
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 0.9,
+          "amount": 1869
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 24.1,
+          "amount": 50196
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 9.6,
+          "amount": 19945
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "HAxneEoZ8Fhk6xsn4kFBVdasPokiGKRCuQbM5Bdr5sfs",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 61111,
+          "pct": 27.4
+        },
+        {
+          "owner": "EJd5TqxLkotyKLwEgAa7VngdZLc4GTdokoLxTrerVH6X",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 11550,
+          "pct": 4.4
+        },
+        {
+          "owner": "NsqiGhFZ2yDcYbhgxhSwijghn8GcVdrCRZXLVjeHoBfL",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 2578,
+          "pct": 1.6
+        },
+        {
+          "owner": "sSsBmMNPk24DfXogq9DHzDQqvCyGoXMAW34sHJsXi23r",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 5071,
+          "pct": 2.3
+        },
+        {
+          "owner": "koHpUgY52wxsaVZGeiUX3RNecJ3btsmmkeY16bJf48yF",
+          "label": "CEX wallet #5",
+          "bucket": "CEX wallet",
+          "amount": 22856,
+          "pct": 13.2
+        }
+      ],
+      "unknownPct": 9.6
+    },
+    "GOOGLx": {
+      "symbol": "GOOGLx",
+      "mint": null,
+      "holders": 2443,
+      "priceUsd": 278.7,
+      "marketCapUsd": 10452644,
+      "volume24hUsd": 935995,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 40.6,
+          "amount": 15239
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 15.1,
+          "amount": 5676
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 7.6,
+          "amount": 2852
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 15.5,
+          "amount": 5821
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 2.1,
+          "amount": 793
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 7.8,
+          "amount": 2907
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 11.2,
+          "amount": 4216
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "es8abKBGfbjLN7hq3s9w2tWXcQesKvfRPfw5i1qatsPS",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 10012,
+          "pct": 24.4
+        },
+        {
+          "owner": "RBycLjD1Pmh7i2t7a7BteVcSRTZ9kMfW5ZgNK2syimsK",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 2181,
+          "pct": 5.2
+        },
+        {
+          "owner": "j8nRTd5cVbL2ywJmaiUVFchjP9aucP1yfmAvjDsrwT1g",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 1948,
+          "pct": 3.8
+        },
+        {
+          "owner": "bjPMgYY8K2KjJNZ2prMHAEhVrXBKqtQZz8FhaBByxXpH",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 3735,
+          "pct": 10.6
+        },
+        {
+          "owner": "udr3gMDHGk8d7nJt1egKaieaa7kEjFnp2SwhcncyPV2H",
+          "label": "Jupiter #5",
+          "bucket": "Jupiter",
+          "amount": 322,
+          "pct": 0.7
+        }
+      ],
+      "unknownPct": 11.2
+    },
+    "GOOGL.o": {
+      "symbol": "GOOGL.o",
+      "mint": null,
+      "holders": 790,
+      "priceUsd": 315.2,
+      "marketCapUsd": 2692754,
+      "volume24hUsd": 202734,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 47,
+          "amount": 4014
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 8.6,
+          "amount": 733
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 3.9,
+          "amount": 332
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 4.8,
+          "amount": 408
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 0.8,
+          "amount": 66
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 27.2,
+          "amount": 2326
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 7.8,
+          "amount": 664
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "SHdw9coJ3jV1QqBncGcXDTMH9e2WqDy54sPJBRpKVpjY",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 1600,
+          "pct": 22.9
+        },
+        {
+          "owner": "YaTNXadDvC42JdiHj5gD4QWnkFMTBZJatCt1PxUDG31v",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 245,
+          "pct": 5
+        },
+        {
+          "owner": "61YtDnD4P3TBfJ8yvFFHUY1Bkt1w98peXqGHQy7B9uFP",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 164,
+          "pct": 2.3
+        },
+        {
+          "owner": "H9xduKppsAcWbPPm9wQUc3CNeit6ZU9gLhyTjTUpVF37",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 176,
+          "pct": 2.5
+        },
+        {
+          "owner": "58YcJwCriBjzGYcWjoSQAjRxGtXdwWgkpkF9BKVAaPWY",
+          "label": "CEX wallet #5",
+          "bucket": "CEX wallet",
+          "amount": 1251,
+          "pct": 12.4
+        }
+      ],
+      "unknownPct": 7.8
+    },
+    "SPYx": {
+      "symbol": "SPYx",
+      "mint": null,
+      "holders": 7945,
+      "priceUsd": 209.3,
+      "marketCapUsd": 74775565,
+      "volume24hUsd": 4410249,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 40.5,
+          "amount": 144565
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 16.4,
+          "amount": 58702
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 12.6,
+          "amount": 45185
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 13.7,
+          "amount": 49044
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 3.6,
+          "amount": 12774
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 8.9,
+          "amount": 31805
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 4.3,
+          "amount": 15189
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "6GFPTQgEDbmMXsMvdKwJGrg1SdDyU1ub8QqL7kbyPecJ",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 75240,
+          "pct": 16.9
+        },
+        {
+          "owner": "TVm7Xa2pUXh8C1Ku1CWcTtRCg5BuizQXKjWgwozjKGRF",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 37815,
+          "pct": 5.3
+        },
+        {
+          "owner": "KrfV2amUddrEzuC9G2aPD1UX57dKsSvY4SLC9DuGxZ8Y",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 16515,
+          "pct": 8
+        },
+        {
+          "owner": "7ipBqydwWLgQRMUHgRaoYKWefQ4TyigWg8UdpTHkaYrz",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 23168,
+          "pct": 7.4
+        },
+        {
+          "owner": "btzrioX6CrkSy4RNHRZygCUBpRtwAo6pyQpCF9ra9drX",
+          "label": "Jupiter #5",
+          "bucket": "Jupiter",
+          "amount": 8436,
+          "pct": 2.2
+        }
+      ],
+      "unknownPct": 4.3
+    },
+    "SPY.o": {
+      "symbol": "SPY.o",
+      "mint": null,
+      "holders": 3425,
+      "priceUsd": 235.6,
+      "marketCapUsd": 26724344,
+      "volume24hUsd": 1620418,
+      "venues": [
+        {
+          "bucket": "Self-custody wallet",
+          "pct": 37.4,
+          "amount": 42458
+        },
+        {
+          "bucket": "Raydium LP",
+          "pct": 9,
+          "amount": 10186
+        },
+        {
+          "bucket": "Orca LP",
+          "pct": 5.3,
+          "amount": 5973
+        },
+        {
+          "bucket": "Kamino (lending)",
+          "pct": 8.7,
+          "amount": 9861
+        },
+        {
+          "bucket": "Jupiter",
+          "pct": 1.7,
+          "amount": 1875
+        },
+        {
+          "bucket": "CEX wallet",
+          "pct": 26.2,
+          "amount": 29756
+        },
+        {
+          "bucket": "Other / unknown",
+          "pct": 11.7,
+          "amount": 13321
+        }
+      ],
+      "topHolders": [
+        {
+          "owner": "6CQyjKfMvVNFe1JLKU3buh14KL8Sqb5AUCSkttrbw2MT",
+          "label": "Self-custody wallet #1",
+          "bucket": "Self-custody wallet",
+          "amount": 17869,
+          "pct": 12.8
+        },
+        {
+          "owner": "mpL77CHStfSoPhWiJT5qXSdnq45n1nVfr4wuGqdLucoH",
+          "label": "Raydium LP #2",
+          "bucket": "Raydium LP",
+          "amount": 5639,
+          "pct": 5.3
+        },
+        {
+          "owner": "QSGjFSvUrkWYjyBiEdqeXXHoesR9c6ftQw6ykezFnTJP",
+          "label": "Orca LP #3",
+          "bucket": "Orca LP",
+          "amount": 3280,
+          "pct": 3.3
+        },
+        {
+          "owner": "yxgfEtR4Ka2EMePsjdvzo11JnDJgNEQGQLTgQwZpxvtS",
+          "label": "Kamino (lending) #4",
+          "bucket": "Kamino (lending)",
+          "amount": 4457,
+          "pct": 3
+        },
+        {
+          "owner": "Zb4TsobP1EuxuVxPjwGujJn9pAxfta9wr4pbxfCULeNg",
+          "label": "Jupiter #5",
+          "bucket": "Jupiter",
+          "amount": 1177,
+          "pct": 1
+        }
+      ],
+      "unknownPct": 11.7
+    }
+  }
+}
