@@ -3,6 +3,7 @@
 /** Venue buckets a holding can be attributed to. Order = display order. */
 export const VENUE_BUCKETS = [
   "Self-custody wallet",
+  "Issuer treasury",
   "Raydium LP",
   "Orca LP",
   "Kamino (lending)",
@@ -16,6 +17,7 @@ export type VenueBucket = (typeof VENUE_BUCKETS)[number];
 // Muted, print-friendly categorical palette (no neon).
 export const VENUE_COLORS: Record<VenueBucket, string> = {
   "Self-custody wallet": "#1d4ed8",
+  "Issuer treasury": "#334155",
   "Raydium LP": "#0f766e",
   "Orca LP": "#0369a1",
   "Kamino (lending)": "#b45309",

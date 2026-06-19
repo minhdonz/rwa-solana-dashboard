@@ -54,6 +54,7 @@ function buildVenues(rand: () => number, defiBias: number, supply: number) {
   // Base weights per bucket, modulated by issuer DeFi bias.
   const weights: Record<VenueBucket, number> = {
     "Self-custody wallet": 30 + rand() * 15,
+    "Issuer treasury": 15 + rand() * 35,
     "Raydium LP": (8 + rand() * 12) * (0.3 + defiBias),
     "Orca LP": (3 + rand() * 7) * (0.3 + defiBias),
     "Kamino (lending)": (6 + rand() * 14) * (0.2 + defiBias),

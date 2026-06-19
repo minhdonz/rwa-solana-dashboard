@@ -1,5 +1,5 @@
 {
-  "snapshotTakenAt": "2026-06-19T09:05:40.276Z",
+  "snapshotTakenAt": "2026-06-19T09:12:51.612Z",
   "isSeed": false,
   "unknownThresholdPct": 15,
   "assets": {
@@ -15,6 +15,11 @@
           "bucket": "Self-custody wallet",
           "amount": 284,
           "pct": 97.6
+        },
+        {
+          "bucket": "Issuer treasury",
+          "amount": 0,
+          "pct": 0
         },
         {
           "bucket": "Raydium LP",
@@ -167,6 +172,11 @@
           "pct": 100
         },
         {
+          "bucket": "Issuer treasury",
+          "amount": 0,
+          "pct": 0
+        },
+        {
           "bucket": "Raydium LP",
           "amount": 0,
           "pct": 0
@@ -303,6 +313,11 @@
           "bucket": "Self-custody wallet",
           "amount": 463,
           "pct": 99.7
+        },
+        {
+          "bucket": "Issuer treasury",
+          "amount": 0,
+          "pct": 0
         },
         {
           "bucket": "Raydium LP",
@@ -479,6 +494,11 @@
           "pct": 98
         },
         {
+          "bucket": "Issuer treasury",
+          "amount": 0,
+          "pct": 0
+        },
+        {
           "bucket": "Raydium LP",
           "amount": 0,
           "pct": 0
@@ -636,24 +656,29 @@
     "SPCX": {
       "symbol": "SPCX",
       "mint": "SPCXxcqXj6e5dJDVNovHN8744zkbhM2bYudU45BimGb",
-      "holders": 10664,
+      "holders": 10661,
       "priceUsd": null,
       "marketCapUsd": null,
       "volume24hUsd": null,
       "venues": [
         {
           "bucket": "Self-custody wallet",
-          "amount": 35084,
-          "pct": 50.7
+          "amount": 35159,
+          "pct": 50.8
+        },
+        {
+          "bucket": "Issuer treasury",
+          "amount": 0,
+          "pct": 0
         },
         {
           "bucket": "Raydium LP",
-          "amount": 17403,
+          "amount": 17382,
           "pct": 25.1
         },
         {
           "bucket": "Orca LP",
-          "amount": 7557,
+          "amount": 7548,
           "pct": 10.9
         },
         {
@@ -673,8 +698,8 @@
         },
         {
           "bucket": "Other / unknown",
-          "amount": 9218,
-          "pct": 13.3
+          "amount": 9174,
+          "pct": 13.2
         }
       ],
       "topHolders": [
@@ -689,7 +714,7 @@
           "owner": "FgjxPHeYsq1axH29fnGKZi6UyRWi4tMPHgu1gc3ezA9U",
           "label": "Orca Whirlpools",
           "bucket": "Orca LP",
-          "amount": 7557,
+          "amount": 7548,
           "pct": 10.9
         },
         {
@@ -703,8 +728,8 @@
           "owner": "D7sZfY6mrfjdauaXhaRzhL7QNzWVjXtkLScQNMXJqc2p",
           "label": null,
           "bucket": "Other / unknown",
-          "amount": 3196,
-          "pct": 4.6
+          "amount": 3140,
+          "pct": 4.5
         },
         {
           "owner": "8SvBvth5x91bkDLxZCrATMhy1xKJNmCPW69r6WwN8MPi",
@@ -738,7 +763,7 @@
           "owner": "FyhWbqUrp9sWzkAbQoSeJvzJ8ag3QfQsagWnQwfNeG89",
           "label": null,
           "bucket": "Other / unknown",
-          "amount": 2862,
+          "amount": 2817,
           "pct": 4.1
         },
         {
@@ -749,13 +774,13 @@
           "pct": 3.8
         }
       ],
-      "unknownPct": 13.3,
+      "unknownPct": 13.2,
       "reviewFlags": [
         {
           "owner": "D7sZfY6mrfjdauaXhaRzhL7QNzWVjXtkLScQNMXJqc2p",
           "bucket": "Other / unknown",
-          "amount": 3196,
-          "pct": 4.6
+          "amount": 3140,
+          "pct": 4.5
         },
         {
           "owner": "9Q58JzxhezZzFoRmStgksrnsDsBKzTSeehu3rsGf9xvC",
@@ -784,7 +809,7 @@
         {
           "owner": "FyhWbqUrp9sWzkAbQoSeJvzJ8ag3QfQsagWnQwfNeG89",
           "bucket": "Other / unknown",
-          "amount": 2862,
+          "amount": 2817,
           "pct": 4.1
         },
         {
@@ -798,19 +823,24 @@
     "SPCXx": {
       "symbol": "SPCXx",
       "mint": "Xs3oZwbHvqis4NYcf4YKWmEia2eC84wSiVrcYcTqpH8",
-      "holders": 5498,
+      "holders": 5497,
       "priceUsd": null,
       "marketCapUsd": null,
       "volume24hUsd": null,
       "venues": [
         {
           "bucket": "Self-custody wallet",
-          "amount": 511561,
-          "pct": 91.4
+          "amount": 150934,
+          "pct": 27
+        },
+        {
+          "bucket": "Issuer treasury",
+          "amount": 360631,
+          "pct": 64.4
         },
         {
           "bucket": "Raydium LP",
-          "amount": 4466,
+          "amount": 4464,
           "pct": 0.8
         },
         {
@@ -835,15 +865,15 @@
         },
         {
           "bucket": "Other / unknown",
-          "amount": 763,
+          "amount": 761,
           "pct": 0.1
         }
       ],
       "topHolders": [
         {
           "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "label": null,
-          "bucket": "Self-custody wallet",
+          "label": "xStocks minter (Backed)",
+          "bucket": "Issuer treasury",
           "amount": 360631,
           "pct": 64.4
         },
@@ -914,12 +944,6 @@
       "unknownPct": 0.1,
       "reviewFlags": [
         {
-          "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "bucket": "Self-custody wallet",
-          "amount": 360631,
-          "pct": 64.4
-        },
-        {
           "owner": "6LY1JzAFVZsP2a2xKrtU6znQMQ5h4i7tocWdgrkZzkzF",
           "bucket": "Self-custody wallet",
           "amount": 68209,
@@ -947,8 +971,13 @@
           "pct": 81.7
         },
         {
+          "bucket": "Issuer treasury",
+          "amount": 0,
+          "pct": 0
+        },
+        {
           "bucket": "Raydium LP",
-          "amount": 1594,
+          "amount": 1593,
           "pct": 18.2
         },
         {
@@ -1092,15 +1121,20 @@
     "NVDAx": {
       "symbol": "NVDAx",
       "mint": "Xsc9qvGR1efVDFGLrVsmkzv3qi45LTBjeUKSPmx9qEh",
-      "holders": 60971,
+      "holders": 60970,
       "priceUsd": null,
       "marketCapUsd": null,
       "volume24hUsd": null,
       "venues": [
         {
           "bucket": "Self-custody wallet",
-          "amount": 267402,
-          "pct": 83.2
+          "amount": 182155,
+          "pct": 56.7
+        },
+        {
+          "bucket": "Issuer treasury",
+          "amount": 85247,
+          "pct": 26.5
         },
         {
           "bucket": "Raydium LP",
@@ -1143,8 +1177,8 @@
         },
         {
           "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "label": null,
-          "bucket": "Self-custody wallet",
+          "label": "xStocks minter (Backed)",
+          "bucket": "Issuer treasury",
           "amount": 85247,
           "pct": 26.5
         },
@@ -1214,12 +1248,6 @@
           "pct": 27.2
         },
         {
-          "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "bucket": "Self-custody wallet",
-          "amount": 85247,
-          "pct": 26.5
-        },
-        {
           "owner": "6LY1JzAFVZsP2a2xKrtU6znQMQ5h4i7tocWdgrkZzkzF",
           "bucket": "Self-custody wallet",
           "amount": 23901,
@@ -1245,6 +1273,11 @@
           "bucket": "Self-custody wallet",
           "amount": 11978,
           "pct": 99.9
+        },
+        {
+          "bucket": "Issuer treasury",
+          "amount": 0,
+          "pct": 0
         },
         {
           "bucket": "Raydium LP",
@@ -1362,19 +1395,24 @@
     "TSLAx": {
       "symbol": "TSLAx",
       "mint": "XsDoVfqeBukxuZHWhdvWHBhgEHjGNst4MLodqsJHzoB",
-      "holders": 26476,
+      "holders": 26475,
       "priceUsd": null,
       "marketCapUsd": null,
       "volume24hUsd": null,
       "venues": [
         {
           "bucket": "Self-custody wallet",
-          "amount": 207415,
-          "pct": 90.3
+          "amount": 154005,
+          "pct": 67.1
+        },
+        {
+          "bucket": "Issuer treasury",
+          "amount": 53393,
+          "pct": 23.3
         },
         {
           "bucket": "Raydium LP",
-          "amount": 4126,
+          "amount": 4128,
           "pct": 1.8
         },
         {
@@ -1399,17 +1437,17 @@
         },
         {
           "bucket": "Other / unknown",
-          "amount": 777,
+          "amount": 780,
           "pct": 0.3
         }
       ],
       "topHolders": [
         {
           "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "label": null,
-          "bucket": "Self-custody wallet",
+          "label": "xStocks minter (Backed)",
+          "bucket": "Issuer treasury",
           "amount": 53393,
-          "pct": 23.2
+          "pct": 23.3
         },
         {
           "owner": "HmMxmEjTbpGqgDsCCmgNfQKCbeH6QcGe1xKn9UXqXFqk",
@@ -1478,12 +1516,6 @@
       "unknownPct": 0.3,
       "reviewFlags": [
         {
-          "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "bucket": "Self-custody wallet",
-          "amount": 53393,
-          "pct": 23.2
-        },
-        {
           "owner": "HmMxmEjTbpGqgDsCCmgNfQKCbeH6QcGe1xKn9UXqXFqk",
           "bucket": "Self-custody wallet",
           "amount": 44999,
@@ -1519,8 +1551,13 @@
       "venues": [
         {
           "bucket": "Self-custody wallet",
-          "amount": 150431,
-          "pct": 97.8
+          "amount": 80388,
+          "pct": 52.3
+        },
+        {
+          "bucket": "Issuer treasury",
+          "amount": 70043,
+          "pct": 45.6
         },
         {
           "bucket": "Raydium LP",
@@ -1556,8 +1593,8 @@
       "topHolders": [
         {
           "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "label": null,
-          "bucket": "Self-custody wallet",
+          "label": "xStocks minter (Backed)",
+          "bucket": "Issuer treasury",
           "amount": 70043,
           "pct": 45.6
         },
@@ -1628,12 +1665,6 @@
       "unknownPct": 0,
       "reviewFlags": [
         {
-          "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "bucket": "Self-custody wallet",
-          "amount": 70043,
-          "pct": 45.6
-        },
-        {
           "owner": "HmMxmEjTbpGqgDsCCmgNfQKCbeH6QcGe1xKn9UXqXFqk",
           "bucket": "Self-custody wallet",
           "amount": 64912,
@@ -1659,6 +1690,11 @@
           "bucket": "Self-custody wallet",
           "amount": 274,
           "pct": 99.7
+        },
+        {
+          "bucket": "Issuer treasury",
+          "amount": 0,
+          "pct": 0
         },
         {
           "bucket": "Raydium LP",
@@ -1794,19 +1830,24 @@
     "MSTRx": {
       "symbol": "MSTRx",
       "mint": "XsP7xzNPvEHS1m6qfanPUGjNmdnmsLKEoNAnHjdxxyZ",
-      "holders": 8496,
+      "holders": 8495,
       "priceUsd": null,
       "marketCapUsd": null,
       "volume24hUsd": null,
       "venues": [
         {
           "bucket": "Self-custody wallet",
-          "amount": 226953,
-          "pct": 94.5
+          "amount": 186020,
+          "pct": 77.4
+        },
+        {
+          "bucket": "Issuer treasury",
+          "amount": 40889,
+          "pct": 17
         },
         {
           "bucket": "Raydium LP",
-          "amount": 7490,
+          "amount": 7527,
           "pct": 3.1
         },
         {
@@ -1831,7 +1872,7 @@
         },
         {
           "bucket": "Other / unknown",
-          "amount": 833,
+          "amount": 840,
           "pct": 0.3
         }
       ],
@@ -1845,8 +1886,8 @@
         },
         {
           "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "label": null,
-          "bucket": "Self-custody wallet",
+          "label": "xStocks minter (Backed)",
+          "bucket": "Issuer treasury",
           "amount": 40889,
           "pct": 17
         },
@@ -1882,7 +1923,7 @@
           "owner": "RyhF4cksVZY7vcqJpoytHcxcGNKRp27PEGhSnEPpbGv",
           "label": "Raydium CLMM",
           "bucket": "Raydium LP",
-          "amount": 5331,
+          "amount": 5368,
           "pct": 2.2
         },
         {
@@ -1916,12 +1957,6 @@
           "pct": 32.8
         },
         {
-          "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "bucket": "Self-custody wallet",
-          "amount": 40889,
-          "pct": 17
-        },
-        {
           "owner": "41Mjig92SfveWPKkqis78hF3a75cpe96n1uuVuMAdkJF",
           "bucket": "Self-custody wallet",
           "amount": 21659,
@@ -1947,6 +1982,11 @@
           "bucket": "Self-custody wallet",
           "amount": 153,
           "pct": 100
+        },
+        {
+          "bucket": "Issuer treasury",
+          "amount": 0,
+          "pct": 0
         },
         {
           "bucket": "Raydium LP",
@@ -2088,19 +2128,24 @@
     "COINx": {
       "symbol": "COINx",
       "mint": "Xs7ZdzSHLU9ftNJsii5fCeJhoRWSC32SQGzGQtePxNu",
-      "holders": 3118,
+      "holders": 3116,
       "priceUsd": null,
       "marketCapUsd": null,
       "volume24hUsd": null,
       "venues": [
         {
           "bucket": "Self-custody wallet",
-          "amount": 124681,
-          "pct": 91.6
+          "amount": 45849,
+          "pct": 33.7
+        },
+        {
+          "bucket": "Issuer treasury",
+          "amount": 78834,
+          "pct": 57.9
         },
         {
           "bucket": "Raydium LP",
-          "amount": 3157,
+          "amount": 3154,
           "pct": 2.3
         },
         {
@@ -2125,15 +2170,15 @@
         },
         {
           "bucket": "Other / unknown",
-          "amount": 585,
+          "amount": 586,
           "pct": 0.4
         }
       ],
       "topHolders": [
         {
           "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "label": null,
-          "bucket": "Self-custody wallet",
+          "label": "xStocks minter (Backed)",
+          "bucket": "Issuer treasury",
           "amount": 78834,
           "pct": 57.9
         },
@@ -2204,12 +2249,6 @@
       "unknownPct": 0.4,
       "reviewFlags": [
         {
-          "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "bucket": "Self-custody wallet",
-          "amount": 78834,
-          "pct": 57.9
-        },
-        {
           "owner": "HmMxmEjTbpGqgDsCCmgNfQKCbeH6QcGe1xKn9UXqXFqk",
           "bucket": "Self-custody wallet",
           "amount": 30599,
@@ -2229,6 +2268,11 @@
           "bucket": "Self-custody wallet",
           "amount": 64,
           "pct": 100
+        },
+        {
+          "bucket": "Issuer treasury",
+          "amount": 0,
+          "pct": 0
         },
         {
           "bucket": "Raydium LP",
@@ -2383,8 +2427,13 @@
       "venues": [
         {
           "bucket": "Self-custody wallet",
-          "amount": 168292,
-          "pct": 97.7
+          "amount": 90960,
+          "pct": 52.8
+        },
+        {
+          "bucket": "Issuer treasury",
+          "amount": 77332,
+          "pct": 44.9
         },
         {
           "bucket": "Raydium LP",
@@ -2420,8 +2469,8 @@
       "topHolders": [
         {
           "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "label": null,
-          "bucket": "Self-custody wallet",
+          "label": "xStocks minter (Backed)",
+          "bucket": "Issuer treasury",
           "amount": 77332,
           "pct": 44.9
         },
@@ -2492,12 +2541,6 @@
       "unknownPct": 0.1,
       "reviewFlags": [
         {
-          "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "bucket": "Self-custody wallet",
-          "amount": 77332,
-          "pct": 44.9
-        },
-        {
           "owner": "HmMxmEjTbpGqgDsCCmgNfQKCbeH6QcGe1xKn9UXqXFqk",
           "bucket": "Self-custody wallet",
           "amount": 75145,
@@ -2515,8 +2558,13 @@
       "venues": [
         {
           "bucket": "Self-custody wallet",
-          "amount": 104374,
-          "pct": 99.4
+          "amount": 54450,
+          "pct": 51.9
+        },
+        {
+          "bucket": "Issuer treasury",
+          "amount": 49924,
+          "pct": 47.6
         },
         {
           "bucket": "Raydium LP",
@@ -2552,8 +2600,8 @@
       "topHolders": [
         {
           "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "label": null,
-          "bucket": "Self-custody wallet",
+          "label": "xStocks minter (Backed)",
+          "bucket": "Issuer treasury",
           "amount": 49924,
           "pct": 47.6
         },
@@ -2624,12 +2672,6 @@
       "unknownPct": 0,
       "reviewFlags": [
         {
-          "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "bucket": "Self-custody wallet",
-          "amount": 49924,
-          "pct": 47.6
-        },
-        {
           "owner": "HmMxmEjTbpGqgDsCCmgNfQKCbeH6QcGe1xKn9UXqXFqk",
           "bucket": "Self-custody wallet",
           "amount": 47553,
@@ -2640,15 +2682,20 @@
     "GOOGLx": {
       "symbol": "GOOGLx",
       "mint": "XsCPL9dNWBMvFtTmwcCA5v3xWPSMEBCszbQdiLLq6aN",
-      "holders": 16553,
+      "holders": 16552,
       "priceUsd": null,
       "marketCapUsd": null,
       "volume24hUsd": null,
       "venues": [
         {
           "bucket": "Self-custody wallet",
-          "amount": 149151,
-          "pct": 93
+          "amount": 97731,
+          "pct": 60.9
+        },
+        {
+          "bucket": "Issuer treasury",
+          "amount": 51420,
+          "pct": 32.1
         },
         {
           "bucket": "Raydium LP",
@@ -2684,8 +2731,8 @@
       "topHolders": [
         {
           "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "label": null,
-          "bucket": "Self-custody wallet",
+          "label": "xStocks minter (Backed)",
+          "bucket": "Issuer treasury",
           "amount": 51420,
           "pct": 32.1
         },
@@ -2756,12 +2803,6 @@
       "unknownPct": 0.4,
       "reviewFlags": [
         {
-          "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "bucket": "Self-custody wallet",
-          "amount": 51420,
-          "pct": 32.1
-        },
-        {
           "owner": "HmMxmEjTbpGqgDsCCmgNfQKCbeH6QcGe1xKn9UXqXFqk",
           "bucket": "Self-custody wallet",
           "amount": 49535,
@@ -2793,6 +2834,11 @@
           "bucket": "Self-custody wallet",
           "amount": 6501,
           "pct": 100
+        },
+        {
+          "bucket": "Issuer treasury",
+          "amount": 0,
+          "pct": 0
         },
         {
           "bucket": "Raydium LP",
@@ -2910,25 +2956,30 @@
     "SPYx": {
       "symbol": "SPYx",
       "mint": "XsoCS1TfEyfFhfvj8EtZ528L3CaKBDBRqRapnBbDF2W",
-      "holders": 24257,
+      "holders": 24260,
       "priceUsd": null,
       "marketCapUsd": null,
       "volume24hUsd": null,
       "venues": [
         {
           "bucket": "Self-custody wallet",
-          "amount": 79638,
-          "pct": 83.6
+          "amount": 31236,
+          "pct": 32.8
+        },
+        {
+          "bucket": "Issuer treasury",
+          "amount": 48294,
+          "pct": 50.7
         },
         {
           "bucket": "Raydium LP",
-          "amount": 2043,
-          "pct": 2.1
+          "amount": 2191,
+          "pct": 2.3
         },
         {
           "bucket": "Orca LP",
-          "amount": 624,
-          "pct": 0.7
+          "amount": 594,
+          "pct": 0.6
         },
         {
           "bucket": "Kamino (lending)",
@@ -2954,8 +3005,8 @@
       "topHolders": [
         {
           "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "label": null,
-          "bucket": "Self-custody wallet",
+          "label": "xStocks minter (Backed)",
+          "bucket": "Issuer treasury",
           "amount": 48294,
           "pct": 50.7
         },
@@ -2970,8 +3021,8 @@
           "owner": "2Z7zhqp1eddmHNmEqexftST6DFPWmoL4QqfgiG5uJMJx",
           "label": null,
           "bucket": "Self-custody wallet",
-          "amount": 5339,
-          "pct": 5.6
+          "amount": 5239,
+          "pct": 5.5
         },
         {
           "owner": "6LY1JzAFVZsP2a2xKrtU6znQMQ5h4i7tocWdgrkZzkzF",
@@ -3026,16 +3077,10 @@
       "unknownPct": 0.4,
       "reviewFlags": [
         {
-          "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-          "bucket": "Self-custody wallet",
-          "amount": 48294,
-          "pct": 50.7
-        },
-        {
           "owner": "2Z7zhqp1eddmHNmEqexftST6DFPWmoL4QqfgiG5uJMJx",
           "bucket": "Self-custody wallet",
-          "amount": 5339,
-          "pct": 5.6
+          "amount": 5239,
+          "pct": 5.5
         },
         {
           "owner": "6LY1JzAFVZsP2a2xKrtU6znQMQ5h4i7tocWdgrkZzkzF",

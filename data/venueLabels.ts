@@ -52,6 +52,10 @@ export const PROGRAM_BUCKETS: Record<string, { bucket: VenueBucket; label: strin
  * adding — verify their Solana hot-wallet addresses on Solscan/Arkham before enabling.
  */
 export const ADDRESS_LABELS: Record<string, { bucket: VenueBucket; label: string }> = {
+  // Issuer treasury / minter — holds large unminted/reserve supply, not a user position.
+  // The same wallet mints every xStocks token (also its on-chain metadata `dev` address).
+  S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS: { bucket: "Issuer treasury", label: "xStocks minter (Backed)" }, // solscan.io/account/S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS
+
   // Verified via Solscan account labels (label shown on the linked account page):
   GJRs4FwHtemZ5ZE9x3FNvJ8TMwitKTh21yxdRPqn7npE: { bucket: "CEX wallet", label: "Coinbase" }, // solscan.io/account/GJRs4FwHtemZ5ZE9x3FNvJ8TMwitKTh21yxdRPqn7npE (Coinbase Hot Wallet 2)
   "53unSgGWqEWANcPYRF35B2Bgf8BkszUtcccKiXwGGLyr": { bucket: "CEX wallet", label: "Binance.US" }, // solscan.io/account/53unSgGWqEWANcPYRF35B2Bgf8BkszUtcccKiXwGGLyr
