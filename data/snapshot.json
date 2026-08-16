@@ -1,14 +1,14 @@
 {
-  "snapshotTakenAt": "2026-08-16T01:42:04.712Z",
+  "snapshotTakenAt": "2026-08-16T12:50:06.818Z",
   "isSeed": false,
   "assets": {
     "TSLAon": {
       "symbol": "TSLAon",
       "mint": "KeGv7bsfR4MheC1CkmnAVceoApjrkvBhHYjWb67ondo",
       "holders": 572,
-      "priceUsd": 314.94245546052093,
-      "marketCapUsd": 113108.90447320949,
-      "volume24hUsd": 265.70722257566104,
+      "priceUsd": 314.6363480968038,
+      "marketCapUsd": 112943.45249434802,
+      "volume24hUsd": 123.24323063721319,
       "dexLiquidityUsd": 0.45159019931877026,
       "lending": [],
       "lendingSupplyUsd": 0,
@@ -40,10 +40,10 @@
     "AMZNon": {
       "symbol": "AMZNon",
       "mint": "14Tqdo8V1FhzKsE3W2pFsZCzYPQxxupXRcqw9jv6ondo",
-      "holders": 227,
-      "priceUsd": 263.04989368372554,
-      "marketCapUsd": 156804.5978391341,
-      "volume24hUsd": 190.28008834985891,
+      "holders": 228,
+      "priceUsd": 264.39576173827976,
+      "marketCapUsd": 157609.37186625495,
+      "volume24hUsd": 172.84442999220863,
       "dexLiquidityUsd": 183.06810304402126,
       "lending": [],
       "lendingSupplyUsd": 0,
@@ -75,10 +75,10 @@
     "MSFTon": {
       "symbol": "MSFTon",
       "mint": "FRmH6iRkMr33DLG6zVLR7EM4LojBFAuq6NtFzG6ondo",
-      "holders": 322,
-      "priceUsd": 496.7437122800232,
-      "marketCapUsd": 228867.31066608697,
-      "volume24hUsd": 39.51952519966373,
+      "holders": 321,
+      "priceUsd": 497.93709380247583,
+      "marketCapUsd": 229412.1334361943,
+      "volume24hUsd": 44.01758916259135,
       "dexLiquidityUsd": 241.48071394189284,
       "lending": [],
       "lendingSupplyUsd": 0,
@@ -110,10 +110,10 @@
     "SPYon": {
       "symbol": "SPYon",
       "mint": "k18WJUULWheRkSpSquYGdNNmtuE2Vbw1hpuUi92ondo",
-      "holders": 1366,
-      "priceUsd": 849.2654626779632,
-      "marketCapUsd": 1244502.631177525,
-      "volume24hUsd": 1903.3841984295066,
+      "holders": 1368,
+      "priceUsd": 779.0338704142537,
+      "marketCapUsd": 1141639.5127223006,
+      "volume24hUsd": 1727.1216145654687,
       "dexLiquidityUsd": 74.1859063500218,
       "lending": [],
       "lendingSupplyUsd": 0,
@@ -145,34 +145,34 @@
     "SPCX": {
       "symbol": "SPCX",
       "mint": "SPCXxcqXj6e5dJDVNovHN8744zkbhM2bYudU45BimGb",
-      "holders": 11282,
-      "priceUsd": 139.51127757162993,
-      "marketCapUsd": 6296296.16472758,
-      "volume24hUsd": 1778815.1117244917,
-      "dexLiquidityUsd": 857896.0270655894,
+      "holders": 11276,
+      "priceUsd": 139.63521004244848,
+      "marketCapUsd": 6341626.565071158,
+      "volume24hUsd": 523583.9542660534,
+      "dexLiquidityUsd": 859483.3950263533,
       "lending": [],
       "lendingSupplyUsd": 0,
       "lendingBorrowUsd": 0,
-      "defiTvlUsd": 857896.0270655894,
+      "defiTvlUsd": 859483.3950263533,
       "slippage": [
         {
           "sizeUsd": 1000,
-          "priceImpactPct": 0,
+          "priceImpactPct": 0.039,
           "routable": true
         },
         {
           "sizeUsd": 10000,
-          "priceImpactPct": 0.003,
+          "priceImpactPct": 0.057,
           "routable": true
         },
         {
           "sizeUsd": 100000,
-          "priceImpactPct": 0.436,
+          "priceImpactPct": 0.464,
           "routable": true
         },
         {
           "sizeUsd": 1000000,
-          "priceImpactPct": 17.257,
+          "priceImpactPct": 17.198,
           "routable": true
         }
       ]
@@ -180,34 +180,34 @@
     "SPCXx": {
       "symbol": "SPCXx",
       "mint": "Xs3oZwbHvqis4NYcf4YKWmEia2eC84wSiVrcYcTqpH8",
-      "holders": 11169,
-      "priceUsd": 139.1730245579865,
-      "marketCapUsd": 77936670.19216837,
-      "volume24hUsd": 578707.3396597474,
-      "dexLiquidityUsd": 770712.5569106886,
+      "holders": 11362,
+      "priceUsd": 138.37229564671173,
+      "marketCapUsd": 77488243.89601523,
+      "volume24hUsd": 975523.318908688,
+      "dexLiquidityUsd": 773550.0284875956,
       "lending": [],
       "lendingSupplyUsd": 0,
       "lendingBorrowUsd": 0,
-      "defiTvlUsd": 770712.5569106886,
+      "defiTvlUsd": 773550.0284875956,
       "slippage": [
         {
           "sizeUsd": 1000,
-          "priceImpactPct": 0.161,
+          "priceImpactPct": 0.852,
           "routable": true
         },
         {
           "sizeUsd": 10000,
-          "priceImpactPct": 0.194,
+          "priceImpactPct": 0.885,
           "routable": true
         },
         {
           "sizeUsd": 100000,
-          "priceImpactPct": 0.741,
+          "priceImpactPct": 1.403,
           "routable": true
         },
         {
           "sizeUsd": 1000000,
-          "priceImpactPct": 58.754,
+          "priceImpactPct": 58.346,
           "routable": true
         }
       ]
@@ -215,24 +215,24 @@
     "SPACEX": {
       "symbol": "SPACEX",
       "mint": "PreANxuXjsy2pvisWWMNB6YaJNzr7681wJJr2rHsfTh",
-      "holders": 10712,
-      "priceUsd": 102.95921742075093,
-      "marketCapUsd": 4500632.0143988775,
-      "volume24hUsd": 18971.425583047843,
-      "dexLiquidityUsd": 69376.34368457632,
+      "holders": 10709,
+      "priceUsd": 102.38903616715113,
+      "marketCapUsd": 4475707.810275267,
+      "volume24hUsd": 8842.246033404279,
+      "dexLiquidityUsd": 69522.50022590422,
       "lending": [],
       "lendingSupplyUsd": 0,
       "lendingBorrowUsd": 0,
-      "defiTvlUsd": 69376.34368457632,
+      "defiTvlUsd": 69522.50022590422,
       "slippage": [
         {
           "sizeUsd": 1000,
-          "priceImpactPct": 0.007,
+          "priceImpactPct": 0.739,
           "routable": true
         },
         {
           "sizeUsd": 10000,
-          "priceImpactPct": 3.902,
+          "priceImpactPct": 4.556,
           "routable": true
         },
         {
@@ -250,45 +250,45 @@
     "NVDAx": {
       "symbol": "NVDAx",
       "mint": "Xsc9qvGR1efVDFGLrVsmkzv3qi45LTBjeUKSPmx9qEh",
-      "holders": 64208,
-      "priceUsd": 224.63834988001466,
-      "marketCapUsd": 72238696.0773763,
-      "volume24hUsd": 770945.8918414019,
-      "dexLiquidityUsd": 2022049.2051395918,
+      "holders": 64225,
+      "priceUsd": 224.83278561927477,
+      "marketCapUsd": 72301221.02171001,
+      "volume24hUsd": 818018.0454988661,
+      "dexLiquidityUsd": 2031234.4157055917,
       "lending": [
         {
           "protocol": "Kamino",
           "market": "xStocks Market",
-          "supplyUsd": 3029975,
-          "borrowUsd": 13843,
+          "supplyUsd": 3029471,
+          "borrowUsd": 13844,
           "utilization": 0.46,
           "supplyApy": 0.02,
           "borrowApy": 3.64,
           "maxLtv": 0.55
         }
       ],
-      "lendingSupplyUsd": 3029975,
-      "lendingBorrowUsd": 13843,
-      "defiTvlUsd": 5052024.205139592,
+      "lendingSupplyUsd": 3029471,
+      "lendingBorrowUsd": 13844,
+      "defiTvlUsd": 5060705.415705591,
       "slippage": [
         {
           "sizeUsd": 1000,
-          "priceImpactPct": 0.052,
+          "priceImpactPct": 0.037,
           "routable": true
         },
         {
           "sizeUsd": 10000,
-          "priceImpactPct": 0.374,
+          "priceImpactPct": 0.287,
           "routable": true
         },
         {
           "sizeUsd": 100000,
-          "priceImpactPct": 0.861,
+          "priceImpactPct": 0.878,
           "routable": true
         },
         {
           "sizeUsd": 1000000,
-          "priceImpactPct": 33.175,
+          "priceImpactPct": 34.074,
           "routable": true
         }
       ]
@@ -296,15 +296,15 @@
     "NVDAon": {
       "symbol": "NVDAon",
       "mint": "gEGtLTPNQ7jcg25zTetkbmF7teoDLcrfTnQfmn2ondo",
-      "holders": 1537,
-      "priceUsd": 230.2170864677491,
-      "marketCapUsd": 3857747.9936853377,
-      "volume24hUsd": 879.2580934392606,
-      "dexLiquidityUsd": 3542.422152739183,
+      "holders": 1544,
+      "priceUsd": 228.65253308236092,
+      "marketCapUsd": 3831519.142271313,
+      "volume24hUsd": 770.0260068914445,
+      "dexLiquidityUsd": 3527.834828363194,
       "lending": [],
       "lendingSupplyUsd": 0,
       "lendingBorrowUsd": 0,
-      "defiTvlUsd": 3542.422152739183,
+      "defiTvlUsd": 3527.834828363194,
       "slippage": [
         {
           "sizeUsd": 1000,
@@ -331,16 +331,16 @@
     "TSLAx": {
       "symbol": "TSLAx",
       "mint": "XsDoVfqeBukxuZHWhdvWHBhgEHjGNst4MLodqsJHzoB",
-      "holders": 28851,
-      "priceUsd": 343.10623616569404,
-      "marketCapUsd": 78790274.23909333,
-      "volume24hUsd": 725076.008869148,
-      "dexLiquidityUsd": 901280.9243911807,
+      "holders": 28854,
+      "priceUsd": 343.11197287845397,
+      "marketCapUsd": 78791589.1980326,
+      "volume24hUsd": 547473.8093738894,
+      "dexLiquidityUsd": 884810.1964848987,
       "lending": [
         {
           "protocol": "Kamino",
           "market": "xStocks Market",
-          "supplyUsd": 2858954,
+          "supplyUsd": 2858630,
           "borrowUsd": 1542,
           "utilization": 0.05,
           "supplyApy": 0,
@@ -348,28 +348,28 @@
           "maxLtv": 0.55
         }
       ],
-      "lendingSupplyUsd": 2858954,
+      "lendingSupplyUsd": 2858630,
       "lendingBorrowUsd": 1542,
-      "defiTvlUsd": 3760234.9243911807,
+      "defiTvlUsd": 3743440.1964848987,
       "slippage": [
         {
           "sizeUsd": 1000,
-          "priceImpactPct": 0.067,
+          "priceImpactPct": 0.02,
           "routable": true
         },
         {
           "sizeUsd": 10000,
-          "priceImpactPct": 0.148,
+          "priceImpactPct": 0.075,
           "routable": true
         },
         {
           "sizeUsd": 100000,
-          "priceImpactPct": 1.109,
-          "routable": true
+          "priceImpactPct": null,
+          "routable": false
         },
         {
           "sizeUsd": 1000000,
-          "priceImpactPct": 12.771,
+          "priceImpactPct": 12.744,
           "routable": true
         }
       ]
@@ -377,16 +377,16 @@
     "AAPLx": {
       "symbol": "AAPLx",
       "mint": "XsbEhLAtcf6HdfpFZ5xEMdqW8nfAvcsP5bdudRLJzJp",
-      "holders": 16181,
-      "priceUsd": 305.42697315710774,
-      "marketCapUsd": 47117583.927770324,
-      "volume24hUsd": 299550.90994567104,
-      "dexLiquidityUsd": 316398.0227369555,
+      "holders": 16174,
+      "priceUsd": 303.73654889497163,
+      "marketCapUsd": 46856805.692129925,
+      "volume24hUsd": 217442.6221835594,
+      "dexLiquidityUsd": 308669.9321748526,
       "lending": [
         {
           "protocol": "Kamino",
           "market": "xStocks Market",
-          "supplyUsd": 400110,
+          "supplyUsd": 401365,
           "borrowUsd": 0,
           "utilization": 0,
           "supplyApy": 0,
@@ -394,28 +394,28 @@
           "maxLtv": 0.4
         }
       ],
-      "lendingSupplyUsd": 400110,
+      "lendingSupplyUsd": 401365,
       "lendingBorrowUsd": 0,
-      "defiTvlUsd": 716508.0227369554,
+      "defiTvlUsd": 710034.9321748526,
       "slippage": [
         {
           "sizeUsd": 1000,
-          "priceImpactPct": 0.015,
+          "priceImpactPct": 0.434,
           "routable": true
         },
         {
           "sizeUsd": 10000,
-          "priceImpactPct": 0.194,
+          "priceImpactPct": 0.696,
           "routable": true
         },
         {
           "sizeUsd": 100000,
-          "priceImpactPct": 26.363,
+          "priceImpactPct": 28.512,
           "routable": true
         },
         {
           "sizeUsd": 1000000,
-          "priceImpactPct": 98.05,
+          "priceImpactPct": 98.059,
           "routable": true
         }
       ]
@@ -423,10 +423,10 @@
     "AAPLon": {
       "symbol": "AAPLon",
       "mint": "123mYEnRLM2LLYsJW3K6oyYh8uP1fngj732iG638ondo",
-      "holders": 1384,
-      "priceUsd": 304.9442129902678,
-      "marketCapUsd": 106630.06106087453,
-      "volume24hUsd": 508.32977524528326,
+      "holders": 1383,
+      "priceUsd": 304.5445066441555,
+      "marketCapUsd": 106459.5588947423,
+      "volume24hUsd": 397.6360920800564,
       "dexLiquidityUsd": 490.28750514285207,
       "lending": [],
       "lendingSupplyUsd": 0,
@@ -458,16 +458,16 @@
     "MSTRx": {
       "symbol": "MSTRx",
       "mint": "XsP7xzNPvEHS1m6qfanPUGjNmdnmsLKEoNAnHjdxxyZ",
-      "holders": 9435,
-      "priceUsd": 94.18319491948789,
-      "marketCapUsd": 40831948.07798459,
-      "volume24hUsd": 156989.78903921664,
-      "dexLiquidityUsd": 327324.1963687394,
+      "holders": 9439,
+      "priceUsd": 94.12630110894594,
+      "marketCapUsd": 40807282.47686547,
+      "volume24hUsd": 70528.38433419945,
+      "dexLiquidityUsd": 324192.9956632307,
       "lending": [
         {
           "protocol": "Kamino",
           "market": "xStocks Market",
-          "supplyUsd": 1194594,
+          "supplyUsd": 1194238,
           "borrowUsd": 0,
           "utilization": 0,
           "supplyApy": 0,
@@ -475,23 +475,23 @@
           "maxLtv": 0.3
         }
       ],
-      "lendingSupplyUsd": 1194594,
+      "lendingSupplyUsd": 1194238,
       "lendingBorrowUsd": 0,
-      "defiTvlUsd": 1521918.1963687395,
+      "defiTvlUsd": 1518430.9956632308,
       "slippage": [
         {
           "sizeUsd": 1000,
-          "priceImpactPct": 0.144,
+          "priceImpactPct": 0.003,
           "routable": true
         },
         {
           "sizeUsd": 10000,
-          "priceImpactPct": 0.431,
+          "priceImpactPct": 0.269,
           "routable": true
         },
         {
           "sizeUsd": 100000,
-          "priceImpactPct": 2.454,
+          "priceImpactPct": 2.304,
           "routable": true
         },
         {
@@ -505,9 +505,9 @@
       "symbol": "MSTRon",
       "mint": "FSz4ouiqXpHuGPcpacZfTzbMjScoj5FfzHkiyu2ondo",
       "holders": 32,
-      "priceUsd": 94.09896046209869,
-      "marketCapUsd": 18903.769132867856,
-      "volume24hUsd": 39.88081262770956,
+      "priceUsd": 93.8866087557486,
+      "marketCapUsd": 18861.109281875884,
+      "volume24hUsd": 49.849909218498226,
       "dexLiquidityUsd": null,
       "lending": [],
       "lendingSupplyUsd": 0,
@@ -539,34 +539,34 @@
     "COINx": {
       "symbol": "COINx",
       "mint": "Xs7ZdzSHLU9ftNJsii5fCeJhoRWSC32SQGzGQtePxNu",
-      "holders": 4351,
-      "priceUsd": 147.67043117534882,
-      "marketCapUsd": 20109718.34697716,
-      "volume24hUsd": 117826.3350643515,
-      "dexLiquidityUsd": 228147.44540998052,
+      "holders": 4343,
+      "priceUsd": 149.13410348895545,
+      "marketCapUsd": 20309040.83655496,
+      "volume24hUsd": 125207.39265232446,
+      "dexLiquidityUsd": 228797.83023320194,
       "lending": [],
       "lendingSupplyUsd": 0,
       "lendingBorrowUsd": 0,
-      "defiTvlUsd": 228147.44540998052,
+      "defiTvlUsd": 228797.83023320194,
       "slippage": [
         {
           "sizeUsd": 1000,
-          "priceImpactPct": 1.209,
+          "priceImpactPct": 0.488,
           "routable": true
         },
         {
           "sizeUsd": 10000,
-          "priceImpactPct": 1.765,
+          "priceImpactPct": 0.805,
           "routable": true
         },
         {
           "sizeUsd": 100000,
-          "priceImpactPct": 3.044,
+          "priceImpactPct": 2.073,
           "routable": true
         },
         {
           "sizeUsd": 1000000,
-          "priceImpactPct": 26.731,
+          "priceImpactPct": 26,
           "routable": true
         }
       ]
@@ -574,10 +574,10 @@
     "COINon": {
       "symbol": "COINon",
       "mint": "5u6KDiNJXxX4rGMfYT4BApZQC5CuDNrG6MHkwp1ondo",
-      "holders": 115,
-      "priceUsd": 148.3862234762429,
-      "marketCapUsd": 29181.187497689254,
-      "volume24hUsd": 63.001589817564025,
+      "holders": 116,
+      "priceUsd": 149.2675260633771,
+      "marketCapUsd": 29362.032262073357,
+      "volume24hUsd": 52.16487757005164,
       "dexLiquidityUsd": null,
       "lending": [],
       "lendingSupplyUsd": 0,
@@ -609,29 +609,29 @@
     "AMZNx": {
       "symbol": "AMZNx",
       "mint": "Xs3eBt7uRfJX8QUs4suhyU8p2M6DoUDrJyWBa8LLZsg",
-      "holders": 6657,
-      "priceUsd": 262.46946154799264,
-      "marketCapUsd": 45222470.969779745,
-      "volume24hUsd": 10476.914369580845,
-      "dexLiquidityUsd": 169234.11016604776,
+      "holders": 6646,
+      "priceUsd": 262.40743621215483,
+      "marketCapUsd": 45211784.2443084,
+      "volume24hUsd": 5163.924188294636,
+      "dexLiquidityUsd": 169227.41301179217,
       "lending": [],
       "lendingSupplyUsd": 0,
       "lendingBorrowUsd": 0,
-      "defiTvlUsd": 169234.11016604776,
+      "defiTvlUsd": 169227.41301179217,
       "slippage": [
         {
           "sizeUsd": 1000,
-          "priceImpactPct": 0.536,
+          "priceImpactPct": 0.561,
           "routable": true
         },
         {
           "sizeUsd": 10000,
-          "priceImpactPct": 0.944,
+          "priceImpactPct": 0.969,
           "routable": true
         },
         {
           "sizeUsd": 100000,
-          "priceImpactPct": 4.868,
+          "priceImpactPct": 4.89,
           "routable": true
         },
         {
@@ -644,24 +644,24 @@
     "MSFTx": {
       "symbol": "MSFTx",
       "mint": "XspzcW1PRtgf6Wj92HCiZdjzKCyFekVD8P5Ueh3dRMX",
-      "holders": 4973,
-      "priceUsd": 494.9518646547891,
-      "marketCapUsd": 52194239.13446647,
-      "volume24hUsd": 23398.098284000407,
-      "dexLiquidityUsd": 198017.42002198473,
+      "holders": 4971,
+      "priceUsd": 495.7283439809256,
+      "marketCapUsd": 52276121.334586285,
+      "volume24hUsd": 7022.877132725191,
+      "dexLiquidityUsd": 199364.64522673795,
       "lending": [],
       "lendingSupplyUsd": 0,
       "lendingBorrowUsd": 0,
-      "defiTvlUsd": 198017.42002198473,
+      "defiTvlUsd": 199364.64522673795,
       "slippage": [
         {
           "sizeUsd": 1000,
-          "priceImpactPct": 0.064,
+          "priceImpactPct": 0.067,
           "routable": true
         },
         {
           "sizeUsd": 10000,
-          "priceImpactPct": 0.785,
+          "priceImpactPct": 0.945,
           "routable": true
         },
         {
@@ -679,16 +679,16 @@
     "GOOGLx": {
       "symbol": "GOOGLx",
       "mint": "XsCPL9dNWBMvFtTmwcCA5v3xWPSMEBCszbQdiLLq6aN",
-      "holders": 18681,
-      "priceUsd": 339.9148235835921,
-      "marketCapUsd": 54630136.41623485,
-      "volume24hUsd": 27708.533960546236,
-      "dexLiquidityUsd": 243849.37103985815,
+      "holders": 18685,
+      "priceUsd": 346.1127246264924,
+      "marketCapUsd": 55626245.311687894,
+      "volume24hUsd": 15045.412681139522,
+      "dexLiquidityUsd": 242398.01297075656,
       "lending": [
         {
           "protocol": "Kamino",
           "market": "xStocks Market",
-          "supplyUsd": 2980053,
+          "supplyUsd": 2977364,
           "borrowUsd": 0,
           "utilization": 0,
           "supplyApy": 0,
@@ -696,23 +696,23 @@
           "maxLtv": 0.6
         }
       ],
-      "lendingSupplyUsd": 2980053,
+      "lendingSupplyUsd": 2977364,
       "lendingBorrowUsd": 0,
-      "defiTvlUsd": 3223902.371039858,
+      "defiTvlUsd": 3219762.0129707567,
       "slippage": [
         {
           "sizeUsd": 1000,
-          "priceImpactPct": 2.406,
+          "priceImpactPct": 0.6,
           "routable": true
         },
         {
           "sizeUsd": 10000,
-          "priceImpactPct": 2.578,
+          "priceImpactPct": 0.802,
           "routable": true
         },
         {
           "sizeUsd": 100000,
-          "priceImpactPct": 4.277,
+          "priceImpactPct": 2.536,
           "routable": true
         },
         {
@@ -725,10 +725,10 @@
     "GOOGLon": {
       "symbol": "GOOGLon",
       "mint": "bbahNA5vT9WJeYft8tALrH1LXWffjwqVoUbqYa1ondo",
-      "holders": 259,
+      "holders": 258,
       "priceUsd": 348.9218113877366,
-      "marketCapUsd": 370225.22388413915,
-      "volume24hUsd": 127.19120955686381,
+      "marketCapUsd": 370222.7247804363,
+      "volume24hUsd": 104.5426733834054,
       "dexLiquidityUsd": 0.0017576573947403046,
       "lending": [],
       "lendingSupplyUsd": 0,
@@ -760,40 +760,40 @@
     "SPYx": {
       "symbol": "SPYx",
       "mint": "XsoCS1TfEyfFhfvj8EtZ528L3CaKBDBRqRapnBbDF2W",
-      "holders": 28225,
-      "priceUsd": 776.1574143827714,
-      "marketCapUsd": 74339710.01281998,
-      "volume24hUsd": 1187129.937929476,
-      "dexLiquidityUsd": 2383276.4928010837,
+      "holders": 28545,
+      "priceUsd": 776.4569427669657,
+      "marketCapUsd": 74368385.8066886,
+      "volume24hUsd": 1663583.9523043288,
+      "dexLiquidityUsd": 2392481.4584621945,
       "lending": [
         {
           "protocol": "Kamino",
           "market": "xStocks Market",
-          "supplyUsd": 4408096,
-          "borrowUsd": 197338,
+          "supplyUsd": 4391675,
+          "borrowUsd": 196888,
           "utilization": 4.48,
           "supplyApy": 0.15,
           "borrowApy": 3.73,
           "maxLtv": 0.73
         }
       ],
-      "lendingSupplyUsd": 4408096,
-      "lendingBorrowUsd": 197338,
-      "defiTvlUsd": 6791372.492801083,
+      "lendingSupplyUsd": 4391675,
+      "lendingBorrowUsd": 196888,
+      "defiTvlUsd": 6784156.458462195,
       "slippage": [
         {
           "sizeUsd": 1000,
-          "priceImpactPct": 0.005,
+          "priceImpactPct": 0.028,
           "routable": true
         },
         {
           "sizeUsd": 10000,
-          "priceImpactPct": 0.05,
+          "priceImpactPct": 0.1,
           "routable": true
         },
         {
           "sizeUsd": 100000,
-          "priceImpactPct": 0.474,
+          "priceImpactPct": 0.591,
           "routable": true
         },
         {
