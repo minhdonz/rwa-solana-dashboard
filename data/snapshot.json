@@ -1,5 +1,5 @@
 {
-  "snapshotTakenAt": "2026-10-18T15:40:41.761Z",
+  "snapshotTakenAt": "2026-10-19T04:07:00.874Z",
   "isSeed": false,
   "assets": {
     "TSLAon": {
@@ -145,34 +145,34 @@
     "SPCX": {
       "symbol": "SPCX",
       "mint": "SPCXxcqXj6e5dJDVNovHN8744zkbhM2bYudU45BimGb",
-      "holders": 103781,
-      "priceUsd": 143.20719956115352,
-      "marketCapUsd": 8873682.968328677,
-      "volume24hUsd": 18215142.09463352,
-      "dexLiquidityUsd": 1987181.8817119482,
+      "holders": 105357,
+      "priceUsd": 148.46599074747022,
+      "marketCapUsd": 9476141.53657495,
+      "volume24hUsd": 21429535.913499117,
+      "dexLiquidityUsd": 2471981.8871487444,
       "lending": [],
       "lendingSupplyUsd": 0,
       "lendingBorrowUsd": 0,
-      "defiTvlUsd": 1987181.8817119482,
+      "defiTvlUsd": 2471981.8871487444,
       "slippage": [
         {
           "sizeUsd": 1000,
-          "priceImpactPct": 0.037,
+          "priceImpactPct": 0.009,
           "routable": true
         },
         {
           "sizeUsd": 10000,
-          "priceImpactPct": 0.193,
+          "priceImpactPct": 0.045,
           "routable": true
         },
         {
           "sizeUsd": 100000,
-          "priceImpactPct": 0.471,
+          "priceImpactPct": 0.29,
           "routable": true
         },
         {
           "sizeUsd": 1000000,
-          "priceImpactPct": 2.983,
+          "priceImpactPct": 10.271,
           "routable": true
         }
       ]
