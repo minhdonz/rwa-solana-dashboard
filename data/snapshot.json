@@ -1,5 +1,5 @@
 {
-  "snapshotTakenAt": "2026-10-29T18:18:25.665Z",
+  "snapshotTakenAt": "2026-10-30T05:12:48.429Z",
   "isSeed": false,
   "assets": {
     "TSLAon": {
@@ -145,45 +145,45 @@
     "SPCX": {
       "symbol": "SPCX",
       "mint": "SPCXxcqXj6e5dJDVNovHN8744zkbhM2bYudU45BimGb",
-      "holders": 120237,
-      "priceUsd": 143.4630889940486,
-      "marketCapUsd": 11946187.357848985,
-      "volume24hUsd": 25841248.919332743,
-      "dexLiquidityUsd": 2816978.485097078,
+      "holders": 121272,
+      "priceUsd": 140.60756529558046,
+      "marketCapUsd": 11952583.66608595,
+      "volume24hUsd": 31191600.76996289,
+      "dexLiquidityUsd": 2057971.2727431701,
       "lending": [
         {
           "protocol": "Kamino",
           "market": "Backpack Market",
-          "supplyUsd": 80243,
+          "supplyUsd": 104642,
           "borrowUsd": 0,
           "utilization": 0,
           "supplyApy": 0,
-          "borrowApy": 26.32,
+          "borrowApy": 26.46,
           "maxLtv": 0.3
         }
       ],
-      "lendingSupplyUsd": 80243,
+      "lendingSupplyUsd": 104642,
       "lendingBorrowUsd": 0,
-      "defiTvlUsd": 2897221.485097078,
+      "defiTvlUsd": 2162613.27274317,
       "slippage": [
         {
           "sizeUsd": 1000,
-          "priceImpactPct": 0,
+          "priceImpactPct": 0.001,
           "routable": true
         },
         {
           "sizeUsd": 10000,
-          "priceImpactPct": 0,
+          "priceImpactPct": 0.018,
           "routable": true
         },
         {
           "sizeUsd": 100000,
-          "priceImpactPct": 0,
+          "priceImpactPct": 0.198,
           "routable": true
         },
         {
           "sizeUsd": 1000000,
-          "priceImpactPct": 1.228,
+          "priceImpactPct": 1.913,
           "routable": true
         }
       ]
